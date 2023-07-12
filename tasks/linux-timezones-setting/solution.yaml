@@ -1,0 +1,6 @@
+- hosts: nautilus_apps
+  # gather_facts: false
+  become: true
+  tasks:
+    - name: Change timezone using timedatectl
+      shell: "timedatectl set-timezone 'Pacific/Chatham'"

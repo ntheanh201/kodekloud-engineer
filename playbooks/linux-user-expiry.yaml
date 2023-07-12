@@ -1,0 +1,10 @@
+- name: Linux user expiry
+  hosts: nautilus_app2
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Create linux user with expiry date
+      user:
+        name: ravi
+        expires: 1638835200
+        

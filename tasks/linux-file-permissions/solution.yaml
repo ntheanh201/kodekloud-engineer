@@ -1,0 +1,8 @@
+- hosts: nautilus_app2
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Update file permissions
+      file:
+        path: /tmp/xfusioncorp.sh
+        mode: +rx

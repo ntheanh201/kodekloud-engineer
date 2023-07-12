@@ -1,5 +1,5 @@
 - hosts: nautilus_apps
-  # gather_facts: false
+  gather_facts: false
   become: true
   tasks:
     - name: Change timezone using timedatectl

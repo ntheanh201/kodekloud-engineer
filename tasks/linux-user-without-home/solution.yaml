@@ -1,0 +1,9 @@
+- hosts: nautilus_app1
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Create linux user without home
+      user:
+        name: javed
+        create_home: false
+        

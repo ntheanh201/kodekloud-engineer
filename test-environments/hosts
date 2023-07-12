@@ -1,0 +1,16 @@
+[nautilus_apps:children]
+nautilus_app1
+nautilus_app2
+nautilus_app3
+
+
+[nautilus_app1]
+localhost ansible_ssh_user=root ansible_ssh_pass=root ansible_port=2221
+
+
+[nautilus_app2]
+localhost ansible_ssh_user=root ansible_ssh_pass=root ansible_port=2221
+
+
+[nautilus_app3]
+localhost ansible_ssh_user=root ansible_ssh_pass=root ansible_port=2221

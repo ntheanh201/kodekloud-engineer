@@ -33,3 +33,14 @@
 | Nautilus Backup Server   | `sshpass -p H@wk3y3 ssh -o StrictHostKeyChecking=no clint@172.16.238.16`   |
 | Nautilus Mail Server     | `sshpass -p Gr00T123 ssh -o StrictHostKeyChecking=no groot@172.16.238.17`  |
 | Jenkins Server for CI/CD | `sshpass -p j@rv!s ssh -o StrictHostKeyChecking=no jenkins@172.16.238.19`  |
+
+
+# Ansible
+
+## Test environment
+
+`ansible-playbook -i test-environments tasks/../solution.yaml`
+
+## Nautilus environment
+
+`ansible-playbook -i environments tasks/../solution.yaml`

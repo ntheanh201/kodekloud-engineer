@@ -1,0 +1,8 @@
+- hosts: nautilus_app2
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Create linux user without home
+      shell: "adduser mark -s /sbin/nologin"
+        
+        

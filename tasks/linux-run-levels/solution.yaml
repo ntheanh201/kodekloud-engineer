@@ -1,0 +1,10 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    target_name: graphical.target  
+
+  tasks:
+    - name: Update runlevel
+      shell: "systemctl set-default {{ target_name }}"

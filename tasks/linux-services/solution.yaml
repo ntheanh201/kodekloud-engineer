@@ -14,4 +14,4 @@
       service:
         name: "{{ package }}"
         state: started
-        enable: true
+        enabled: true

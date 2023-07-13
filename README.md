@@ -25,6 +25,13 @@
 | Nautilus App 3           | `sshpass -p BigGr33n ssh -o StrictHostKeyChecking=no banner@172.16.238.12` |
 
 
+# Getting Started
+
+- Clone the repository: `git clone https://github.com/ntheanh201/kodekloud-engineer-ansible.git`
+- Go to folder: `cd kodekloud-engineer-ansible`
+- Install Ansible: `source ./install_ansible.sh`
+- Solve task by running Ansible playbook
+
 # Ansible
 
 ## Test environment

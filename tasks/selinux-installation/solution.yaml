@@ -1,0 +1,21 @@
+- hosts: nautilus_app3
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Install SELinux packages
+      package:
+        name: selinux*
+        state: present
+    - name: Disable permantly SELinux
+      lineinfile:
+        path: /etc/selinux/config
+        regexp: '^SELINUX='
+        line: SELINUX=disabled
+    - name: Debug sestatus
+      shell: sestatus
+      register: sestatus
+    - debug:
+        msg: "{{ sestatus.stdout }}"
+    - name: Check sestatus
+      assert:
+        that: "'disabled' in sestatus.stdout"

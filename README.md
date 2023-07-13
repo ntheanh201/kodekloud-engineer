@@ -32,3 +32,13 @@
 ## Nautilus environment
 
 `ansible-playbook -i environments tasks/../solution.yaml`
+
+
+# Tasks
+
+- [Linux Timezones Setting](/tasks/linux-timezones-setting/)
+- [Linux user expiry](/tasks/linux-user-expiry/)
+- [Linux user with non-interactive shell](/tasks/linux-user-with-non-interactive-shell/)
+- [Linux user without home](/tasks/linux-user-without-home/)
+- [Linux file permissions](/tasks/linux-file-permissions/)
+- [Selinux installation](/tasks/selinux-installation/)

@@ -1,11 +1,12 @@
 - hosts: nautilus_app1
   gather_facts: false
   become: true
+
+  vars:
+    user: mariyam
+    src_dir: /home/usersdata/
+    dest_dir: /media
+
   tasks:
-    - name: Move all files owned by mariyam to /media
-      copy:
-        remote_src: true
-        src: /home/usersdata
-        dest: /media/home
-        owner: mariyam
-        group: root
+    - name: Move all files owned by {{ user }} to {{ dest_dir }}
+      shell: "find {{ src_dir }} -type f -user {{ user }} -exec cp --parents {} {{ dest_dir }} \\;"

@@ -1,0 +1,11 @@
+- hosts: nautilus_app1
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Move all files owned by mariyam to /media
+      copy:
+        remote_src: true
+        src: /home/usersdata
+        dest: /media/home
+        owner: mariyam
+        group: root

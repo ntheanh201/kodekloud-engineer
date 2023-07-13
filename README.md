@@ -69,3 +69,4 @@
 - [Linux User Files](/tasks/linux-user-files/)
 - [Linux Remote Copy](/tasks/linux-remote-copy/)
 - [MariaDB Troubleshooting](/tasks/mariadb-troubleshooting/)
+- [Disable Root Login](/tasks/disable-root-login/)

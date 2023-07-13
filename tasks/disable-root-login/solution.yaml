@@ -1,0 +1,17 @@
+- hosts: nautilus_db_server
+  gather_facts: false
+  become: true
+
+  vars:
+    sshd_config: /etc/ssh/sshd_config
+
+  tasks:
+    - name: Disable SSH login
+      lineinfile:
+        path: /etc/postfix/main.cf
+        regexp: '^#PermitRootLogin yes'
+        line: PermitRootLogin no
+    - name: Restart SSH service
+      service:
+        name: sshd
+        state: restarted

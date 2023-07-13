@@ -1,8 +1,10 @@
 # KodeKloud Engineer Ansible
 
-- Jumphost: CentOS 8
+- Jumphost: `CentOS 8`
+    - user: `thor`
+    - password: `mjolnir123`
 
-- Nautilus App Servers: CentOS 7
+- Nautilus App Servers: `CentOS 7`
 
 # Common Linux commands
 

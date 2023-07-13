@@ -13,8 +13,6 @@
     - systemd:
         name: crond
       register: crond_service_status
-    - debug:
-        var: crond_service_status
     - name: Check crond service is running
       assert:
         that: "'active' in crond_service_status.status.ActiveState"
@@ -22,8 +20,8 @@
       cron:
         name: "cron_text"
         state: present
-        minute: "*"
-        hour: "*/5"
+        minute: "*/5"
+        hour: "*"
         day: "*"
         month: "*"
         weekday: "*"

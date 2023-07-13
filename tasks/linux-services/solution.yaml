@@ -1,0 +1,17 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    package: postfix
+
+  tasks:
+    - name: Install {{ package }} package
+      package:
+        name: "{{ package }}"
+        state: present
+    - name: Enable {{ package }} service
+      service:
+        name: "{{ package }}"
+        state: started
+        enable: true

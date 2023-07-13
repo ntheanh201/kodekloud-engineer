@@ -67,3 +67,4 @@
 - [Linux Postfix Troubleshooting](/tasks/linux-postfix-troubleshooting/)
 - [Linux String Substitute](/tasks/linux-string-substitute/)
 - [Linux User Files](/tasks/linux-user-files/)
+- [Linux Remote Copy](/tasks/linux-remote-copy/)

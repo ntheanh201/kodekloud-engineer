@@ -1,0 +1,17 @@
+- hosts: nautilus_app1
+  gather_facts: false
+  become: true
+
+  vars:
+    src_dir: /tmp
+    dest_dir: /home
+
+  tasks:
+    - name: ensures {{ dest_dir }}/app dir exists
+      file: 
+        path: "{{ dest_dir }}/app"
+        state: directory
+    - name: Copy files to {{ dest_dir }}
+      copy:
+        src: "{{ src_dir }}/nautilus.txt.gpg"
+        dest: "{{ dest_dir }}/app/nautilus.txt.gpg"

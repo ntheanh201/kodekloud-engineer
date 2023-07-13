@@ -44,3 +44,7 @@
 - [Linux user without home](/tasks/linux-user-without-home/)
 - [Linux file permissions](/tasks/linux-file-permissions/)
 - [Selinux installation](/tasks/selinux-installation/)
+- [Linux Run Levels](/tasks/linux-run-levels/)
+- [Create a Cron Job](/tasks/create-a-cron-job/)
+- [Linux Postfix Troubleshooting](/tasks/linux-postfix-troubleshooting/)
+- [Linux string substitute](/tasks/linux-string-substitute/)

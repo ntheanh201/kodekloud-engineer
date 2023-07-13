@@ -1,0 +1,31 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Install cronie package
+      package:
+        name: cronie
+        state: present
+    - name: Start crond service
+      service:
+        name: crond
+        state: started
+    - systemd:
+        name: crond
+      register: crond_service_status
+    - debug:
+        var: crond_service_status
+    - name: Check crond service is running
+      assert:
+        that: "'active' in crond_service_status.status.ActiveState"
+    - name: Add a cronjob
+      cron:
+        name: "cron_text"
+        state: present
+        minute: "*"
+        hour: "*/5"
+        day: "*"
+        month: "*"
+        weekday: "*"
+        job: "echo hello > /tmp/cron_text"
+

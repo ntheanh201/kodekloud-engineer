@@ -1,0 +1,14 @@
+- hosts: nautilus_mail_server
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Edit postfix conf
+      lineinfile:
+        path: /etc/postfix/main.cf
+        regexp: '^inet_interfaces = localhost'
+        line: inet_interfaces = 127.0.0.1
+    - name: Start postfix service
+      systemd:
+        name: postfix
+        state: started
+

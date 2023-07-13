@@ -4,8 +4,6 @@
 
 There is a critical issue going on with the Nautilus application in Stratos DC. The production support team identified that the application is unable to connect to the database. After digging into the issue, the team found that mariadb service is down on the database server.
 
-
-
 Look into the issue and fix the same.
 
 ### Debugging
@@ -13,6 +11,8 @@ Look into the issue and fix the same.
 `systemctl start mariadb`
 
 `systemctl status mariadb -l`
+
+```bash
 ● mariadb.service - MariaDB database server
    Loaded: loaded (/usr/lib/systemd/system/mariadb.service; disabled; vendor preset: disabled)
    Active: failed (Result: exit-code) since Thu 2023-07-13 09:42:40 UTC; 36s ago
@@ -28,6 +28,7 @@ Jul 13 09:42:40 stdb01.stratos.xfusioncorp.com systemd[1]: Failed to start Maria
 Jul 13 09:42:40 stdb01.stratos.xfusioncorp.com systemd[1]: Unit mariadb.service entered failed state.
 Jul 13 09:42:40 stdb01.stratos.xfusioncorp.com systemd[1]: mariadb.service failed.
 Jul 13 09:42:40 stdb01.stratos.xfusioncorp.com systemd[1]: mariadb.service: cgroup is empty
+```
 
 - default mariadb service folder: `/usr/lib/systemd/system`
 

@@ -11,4 +11,10 @@
       systemd:
         name: postfix
         state: started
+    - systemd:
+        name: postfix
+      register: postfix_service_status
+    - name: Check postfix service is running
+      assert:
+        that: "'active' in postfix_service_status.status.ActiveState"
 

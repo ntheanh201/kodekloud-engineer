@@ -1,0 +1,12 @@
+- hosts: nautilus_apps,nautilus_db_server
+  gather_facts: false
+  become: true
+
+  var:
+    src_file: /home/thor/nautilus_banner
+
+  tasks:
+    - name: Update message of the day
+      copy:
+        src: "{{ src_file }}"
+        dest: /etc/motd

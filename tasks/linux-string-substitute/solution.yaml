@@ -1,0 +1,10 @@
+- hosts: nautilus_backup_server
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Find & Replace all String to Torpedo
+      replace:
+        path: /root/nautilus.xml
+        after: <string>
+        regexp: String
+        replace: Torpedo

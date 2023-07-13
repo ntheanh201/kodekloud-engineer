@@ -14,3 +14,6 @@ localhost ansible_ssh_user=root ansible_ssh_pass=root ansible_port=2221
 
 [nautilus_app3]
 localhost ansible_ssh_user=root ansible_ssh_pass=root ansible_port=2221
+
+[nautilus_backup_server]
+localhost ansible_ssh_user=root ansible_ssh_pass=root ansible_port=2221

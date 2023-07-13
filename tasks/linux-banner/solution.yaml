@@ -1,8 +1,8 @@
-- hosts: nautilus_apps,nautilus_db_server
+- hosts: nautilus_apps_db
   gather_facts: false
   become: true
 
-  var:
+  vars:
     src_file: /home/thor/nautilus_banner
 
   tasks:

@@ -1,3 +1,7 @@
+[nautilus_apps_db:children]
+nautilus_apps
+nautilus_db_server
+
 [nautilus_apps:children]
 nautilus_app1
 nautilus_app2

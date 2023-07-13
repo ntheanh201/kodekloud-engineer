@@ -1,4 +1,4 @@
-- hosts: nautilus_backup_server
+- hosts: nautilus_app3
   gather_facts: false
   become: true
 

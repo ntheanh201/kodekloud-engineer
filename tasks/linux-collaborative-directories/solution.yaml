@@ -1,0 +1,15 @@
+- hosts: nautilus_app2
+  gather_facts: false
+  become: true
+
+  vars:
+    group: sysadmin
+    dir: /sysadmin
+    sub_dir: /data
+
+  tasks:
+    - name: ensures {{ dest_dir }}/app dir exists
+      file: 
+        path: "{{ dir }}{{ sub_dir }}"
+        state: directory
+        mode: '0770'

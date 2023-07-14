@@ -72,3 +72,4 @@
 - [Disable Root Login](/tasks/disable-root-login/)
 - [Linux Services](/tasks/linux-services/)
 - [Linux Banner](/tasks/linux-banner)
+- [Linux Collaborative Directories](/tasks/linux-collaborative-directories/)

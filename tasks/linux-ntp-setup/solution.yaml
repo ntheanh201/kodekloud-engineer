@@ -1,0 +1,16 @@
+- hosts: nautilus_app3
+  gather_facts: false
+  become: true
+
+  vars:
+    ntp_conf: /etc/ntp.conf
+
+  tasks:
+    - name: Install NTP
+      package:
+        name: ntp
+        state: present
+    - name: Configure NTP servers
+      lineinfile:
+        path: "{{ ntp_conf }}"
+        line: server 3.pool.ntp.org iburst

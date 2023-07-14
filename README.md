@@ -74,3 +74,4 @@
 - [Linux Banner](/tasks/linux-banner)
 - [Linux Collaborative Directories](/tasks/linux-collaborative-directories/)
 - [DNS Troubleshooting](/tasks/dns-troubleshooting/)
+- [Linux NTP Setup](/tasks/linux-ntp-setup/)

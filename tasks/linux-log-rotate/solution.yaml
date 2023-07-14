@@ -1,0 +1,26 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    package: httpd
+
+  tasks:
+    - name: Install {{ package }} package
+      package:
+        name: "{{ package }}"
+        state: present
+    - name: Create logrotate for {{ package }}
+      file:
+        path: "/etc/logrotate.d/{{ package }}"
+        state: touch
+    - name: Add logrotate config
+      copy:
+        dest: "/etc/logrotate.d/{{ package }}"
+        content: |
+          /var/log/httpd/*log {
+            compress
+            missingok
+            monthly
+            rotate 3
+          }

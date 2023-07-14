@@ -8,7 +8,12 @@
     sub_dir: /data
 
   tasks:
-    - name: ensures {{ dest_dir }}/app dir exists
+    - name: create {{ dir }}
+      file: 
+        path: "{{ dir }}"
+        state: directory
+        mode: '0770'
+    - name: create {{ dir }}{{ sub_dir }}
       file: 
         path: "{{ dir }}{{ sub_dir }}"
         state: directory

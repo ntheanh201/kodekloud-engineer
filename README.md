@@ -1,8 +1,9 @@
 # KodeKloud Engineer Ansible
 
 - Jumphost: `CentOS 8`
-    - user: `thor`
-    - password: `mjolnir123`
+
+  - user: `thor`
+  - password: `mjolnir123`
 
 - Nautilus App Servers: `CentOS 7`
 
@@ -30,7 +31,7 @@
 | Nautilus App 2           | `sshpass -p Am3ric@ ssh -o StrictHostKeyChecking=no steve@172.16.238.11`   |
 | Nautilus App 3           | `sshpass -p BigGr33n ssh -o StrictHostKeyChecking=no banner@172.16.238.12` |
 | Nautilus HTTP LBR        | `sshpass -p Mischi3f ssh -o StrictHostKeyChecking=no loki@172.16.238.14`   |
-| Nautilus DB Server       | `sshpass -p 'Sp!dy' ssh -o StrictHostKeyChecking=no peter@172.16.239.10`     |
+| Nautilus DB Server       | `sshpass -p 'Sp!dy' ssh -o StrictHostKeyChecking=no peter@172.16.239.10`   |
 | Nautilus Storage Server  | `sshpass -p Bl@kW ssh -o StrictHostKeyChecking=no natasha@172.16.238.15`   |
 | Nautilus Backup Server   | `sshpass -p H@wk3y3 ssh -o StrictHostKeyChecking=no clint@172.16.238.16`   |
 | Nautilus Mail Server     | `sshpass -p Gr00T123 ssh -o StrictHostKeyChecking=no groot@172.16.238.17`  |
@@ -52,7 +53,6 @@
 ## Nautilus environment
 
 `ansible-playbook -i environments tasks/../solution.yaml`
-
 
 # Tasks
 

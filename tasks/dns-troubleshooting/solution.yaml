@@ -6,8 +6,9 @@
     dns_file: /etc/resolv.conf
 
   tasks:
-    - name: Insert Google DNS nameserver
+    - name: Change to Google DNS
       lineinfile:
         path: "{{ dns_file }}"
         regexp: '^nameserver'
         line: nameserver 8.8.8.8
+        unsafe_writes: true

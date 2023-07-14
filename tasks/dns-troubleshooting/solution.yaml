@@ -1,0 +1,13 @@
+- hosts: nautilus_app2
+  gather_facts: false
+  become: true
+
+  vars:
+    dns_file: /etc/resolv.conf
+
+  tasks:
+    - name: Insert Google DNS nameserver
+      lineinfile:
+        path: "{{ dns_file }}"
+        regexp: '^nameserver'
+        line: nameserver 8.8.8.8

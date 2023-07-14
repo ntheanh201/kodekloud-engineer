@@ -1,6 +1,6 @@
 - hosts: nautilus_apps
   gather_facts: false
-  become: true
+  become: false
 
   vars:
     id_rsa_file: "/root/.ssh/id_rsa"

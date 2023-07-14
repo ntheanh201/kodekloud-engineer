@@ -3,18 +3,30 @@
   become: true
 
   vars:
-    group: sysadmin
-    dir: /sysadmin
+    group: sysops
+    dir: /sysops
     sub_dir: /data
 
   tasks:
+    - name: create user {{ group }}
+      user:
+        name: "{{ group }}"
+        group: "{{ group }}"
+    - name: create group {{ group }}
+      group:
+        name: "{{ group }}"
+        state: present
     - name: create {{ dir }}
-      file: 
+      file:
         path: "{{ dir }}"
         state: directory
-        mode: '0770'
+        mode: "0770"
+        owner: "{{ group }}"
+        group: "{{ group }}"
     - name: create {{ dir }}{{ sub_dir }}
-      file: 
+      file:
         path: "{{ dir }}{{ sub_dir }}"
         state: directory
-        mode: '0770'
+        mode: "0770"
+        owner: "{{ group }}"
+        group: "{{ group }}"

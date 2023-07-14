@@ -1,0 +1,28 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    id_rsa_file: "/root/.ssh/id_rsa"
+    passphrase: "changeit"
+    nodes:
+      - ip: 172.16.238.10
+        user: tony
+        password: Ir0nM@n
+      - ip: 172.16.238.11
+        user: steve
+        password: Am3ric@
+      - ip: 172.16.238.12
+        user: banner
+        password: BigGr33n
+
+  tasks:
+    - stat:
+        path: "{{ id_rsa_file }}"
+      register: op
+    - name: Generating ssh key pair
+      command: ssh-keygen -t rsa -b 4096 -f "{{ id_rsa_file }}" -q -N "{{ passphrase }}"
+      when: op.stat.exists == false
+    - name: Copy public key to the nodes
+      command: sshpass -p "{{ item.password }}" ssh-copy-id -i "{{ id_rsa_file }}" {{ item.user }}@"{{ item.ip }}" -f -o StrictHostKeyChecking=no
+      loop: "{{ nodes }}"

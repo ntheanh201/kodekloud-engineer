@@ -75,3 +75,4 @@
 - [Linux Collaborative Directories](/tasks/linux-collaborative-directories/)
 - [DNS Troubleshooting](/tasks/dns-troubleshooting/)
 - [Linux NTP Setup](/tasks/linux-ntp-setup/)
+- [Linux SSH Authentication](/tasks/linux-ssh-authentication/)

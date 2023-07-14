@@ -1,0 +1,29 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    user: john
+    group: wheel
+
+  tasks:
+    - name: Make sure we have a 'wheel' group
+      group:
+        name: wheel
+        state: present
+
+    - name: Allow '{{ group }}' group to have passwordless sudo
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        regexp: '^%wheel'
+        line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+        validate: 'visudo -cf %s'
+
+    - name: Add sudoers users to '{{ group }}' group
+      user:
+        name="{{ user }}"
+        groups="{{ group }}"
+        append=yes
+        state=present
+        createhome=yes

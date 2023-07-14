@@ -77,3 +77,5 @@
 - [Linux NTP Setup](/tasks/linux-ntp-setup/)
 - [Linux SSH Authentication](/tasks/linux-ssh-authentication/)
 - [Linux Find Command](/tasks/linux-find-command/)
+- [Linux LogRotate](/tasks/linux-log-rotate/)
+- [Linux Configure sudo](/tasks/linux-configure-sudo/)

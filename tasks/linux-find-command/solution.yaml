@@ -1,0 +1,29 @@
+- hosts: nautilus_app3
+  gather_facts: false
+  become: true
+
+  vars:
+    src_dir: /var/www/html/media
+    dest_dir: /media
+    file_ext: php
+
+  tasks:
+    - name: Find all .{{ file_ext }} files
+      find:
+        path: "{{ src_dir }}"
+        patterns: "*{{file_ext}}"
+        recurse: true
+      register: found_files
+    - name: Create destination directories
+      file:
+        path: "{{ dest_dir }}/{{ item.path | dirname }}"
+        state: directory
+      loop: '{{ found_files.files }}'
+      loop_control:
+        label: '{{ item.path | dirname }}'
+    - name: Copy all found files to {{ dest_dir }}
+      copy:
+        dest: "{{ dest_dir }}{{ item.path | dirname }}"
+        remote_src: yes
+        src: "{{ item.path }}"
+      with_items: "{{ found_files.files }}"

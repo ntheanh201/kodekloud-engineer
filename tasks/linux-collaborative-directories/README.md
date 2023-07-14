@@ -12,4 +12,6 @@ The directory should be group owned by the group sysops and the group should own
 
 ### Solution
 
+- Understanding Linux file permissions: https://www.redhat.com/sysadmin/linux-file-permissions-explained
+
 - See: [Ansible solution](./solution.yaml)

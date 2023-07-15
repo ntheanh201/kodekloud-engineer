@@ -1,0 +1,24 @@
+- hosts: nautilus_app3
+  gather_facts: false
+  become: true
+
+  vars:
+    apache_conf: /etc/httpd/conf/httpd.conf
+
+  tasks:
+    - name: Hide Apache version number
+      lineinfile:
+        path: "{{ apache_conf }}"
+        state: present
+        line: |
+          ServerTokens Prod
+          ServerSignature Off
+    - name: Disable directory browser listing Apache
+      lineinfile:
+        path: "{{ apache_conf }}"
+        regexp: "Options Indexes"
+        line: "    Options FollowSymLinks"
+    - name: Restart Apache server
+      service:
+        name: httpd
+        state: restarted

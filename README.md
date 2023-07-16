@@ -80,3 +80,4 @@
 - [Linux LogRotate](/tasks/linux-log-rotate/)
 - [Linux Configure sudo](/tasks/linux-configure-sudo/)
 - [Web Server Security](/tasks/web-server-security)
+- [Linux Bash Scripts](/tasks/linux-bash-scripts)

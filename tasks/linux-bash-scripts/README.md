@@ -21,4 +21,17 @@ user (for example, tony in case of App Server 1) must be able to run it.
 
 ### Solution
 
+```shell
+
+sshpass -p Am3ric@ ssh -o StrictHostKeyChecking=no steve@172.16.238.11
+cd /scripts
+echo "zip -r xfusioncorp_media.zip /var/www/html/media
+mv xfusioncorp_media.zip /backup/xfusioncorp_media.zip" > media_backup.sh
+chmod +x media_backup.sh
+./media_backup.sh
+
+
+
+```
+
 - See: [Ansible solution](./solution.yaml)

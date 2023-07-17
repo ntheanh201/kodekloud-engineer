@@ -1,0 +1,18 @@
+- hosts: nautilus_app1
+  gather_facts: false
+  become: true
+
+  vars:
+    zip_name: /backup/xfusioncorp_ecommerce.zip
+    zip_dir: /var/www/html/ecommerce
+    backup_dir: /backup/
+
+  tasks:
+    - name: Create a zip archive
+      archive:
+        path: "{{ zip_dir }}"
+        dest: "{{ zip_name }}"
+        format: zip
+    - name: Copy backup zip to backup server
+      synchronize: "src={{ zip_name }} dest={{ backup_dir }}"
+      delegate_to: nautilus_backup_server

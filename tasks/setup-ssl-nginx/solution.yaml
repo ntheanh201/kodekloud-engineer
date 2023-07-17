@@ -1,0 +1,80 @@
+- hosts: nautilus_app3
+  gather_facts: false
+  become: true
+
+  vars:
+    self_signed_cert: /tmp/nautilus.crt
+    self_signed_key: /tmp/nautilus.key
+    dest_self_signed_cert: /etc/nginx/nautilus.crt
+    dest_self_signed_key: /etc/nginx/nautilus.key
+    # nginx_root: /usr/share/nginx/html
+    nginx_root_dir: /usr/share/doc/HTML
+    nginx_root: /usr/share/doc/HTML/index.html
+    root_content: Welcome!
+    nginx_conf: /etc/nginx/nginx.conf
+
+  tasks:
+    - name: Install epel-release
+      package:
+        name: epel-release
+        state: present
+    - name: Install nginx package
+      package:
+        name: nginx
+        state: present
+    - name: Create {{ nginx_root_dir }} dir
+      file:
+        path: "{{ nginx_root_dir }}"
+        state: directory
+    - name: Update root file
+      copy:
+        dest: "{{ nginx_root }}"
+        content: "{{ root_content }}"
+    - name: Copy SSL cert to nginx folder
+      copy:
+        remote_src: true
+        src: "{{ self_signed_cert }}"
+        dest: "{{ dest_self_signed_cert }}"
+    - name: Copy SSL key to nginx folder
+      copy:
+        remote_src: true
+        src: "{{ self_signed_key }}"
+        dest: "{{ dest_self_signed_key }}"
+    - name: Start nginx service
+      service:
+        name: nginx
+        state: started
+    - name: Add SSL config Nginx
+      lineinfile:
+        path: "{{ nginx_conf }}"
+        insertbefore: "}"
+        state: present
+        line: |
+          server {
+            listen       443 ssl http2;
+            listen       [::]:443 ssl http2;
+            server_name  _;
+            root         /usr/share/nginx/html;
+
+            ssl_certificate "{{ dest_self_signed_cert }}";
+            ssl_certificate_key "{{ dest_self_signed_key }}";
+            ssl_session_cache shared:SSL:1m;
+            ssl_session_timeout  10m;
+            ssl_ciphers HIGH:!aNULL:!MD5;
+            ssl_prefer_server_ciphers on;
+
+            # Load configuration files for the default server block.
+            include /etc/nginx/default.d/*.conf;
+
+            error_page 404 /404.html;
+            location = /40x.html {
+            }
+
+            error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
+            }
+           }
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: started

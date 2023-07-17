@@ -83,3 +83,4 @@
 - [Install a package](/tasks/install-a-package/)
 - [Linux GPG Encryption](/tasks/linux-gpg-encryption/)
 - [Configure Local Yum repos](/tasks/configure-local-yum-repos/)
+- [Setup SSL for Nginx](/tasks/setup-ssl-nginx/)

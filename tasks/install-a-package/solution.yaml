@@ -1,0 +1,12 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    pkg: git
+
+  tasks:
+    - name: Install {{ pkg }} package
+      package:
+        name: "{{ pkg }}"
+        state: present

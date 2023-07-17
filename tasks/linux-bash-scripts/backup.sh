@@ -1,4 +1,6 @@
 #!/bin/bash
 
-zip -r xfusioncorp_media.zip /var/www/html/media
-mv xfusioncorp_media.zip /backup/xfusioncorp_media.zip
+zip -r xfusioncorp_news.zip /var/www/html/news
+mv xfusioncorp_news.zip /backup/xfusioncorp_news.zip
+
+scp /backup/xfusioncorp_news.zip clint@172.16.238.16:/backup

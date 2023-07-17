@@ -1,0 +1,30 @@
+- hosts: nautilus_storage_server
+  gather_facts: false
+  become: false
+
+  vars:
+    encrypt_file: /home/encrypt_me.txt
+    dest_encrypt_file: /home/encrypted_me.asc
+    decrypt_file: /home/decrypt_me.asc
+    dest_decrypt_file: /home/decrypted_me.txt
+    passphrase: kokekloud
+    private_key: /home/private_key.asc
+    public_key: /home/public_key.asc
+
+  tasks:
+    - name: Import key to GPG
+      shell: "gpg --import {{ private_key }}"
+    # TODO: make Ansible solution 
+    # - name: Encrypt {{ encrypt_file }}
+    #   shell: "echo Bl@kW | sudo -S gpg -o --batch --passphrase {{ passphrase }} {{ dest_encrypt_file }} -c {{ encrypt_file }}"
+    # - name: Decrypt {{ decrypt_file }}
+    #   shell: "echo Bl@kW | sudo -S gpg -d --batch --passphrase {{ passphrase }} -o {{ dest_decrypt_file }} {{ decrypt_file }}"
+    # - name: Check enctyped file & decrypted file exists
+    #   stat:
+    #     path: "{{ item }}"
+    #   register: file_data
+    #   with_items:
+    #     - "{{ dest_encrypt_file }}"
+    #     - "{{ dest_decrypt_file }}"
+    # - debug:
+    #     msg: "{{ file_data }}"

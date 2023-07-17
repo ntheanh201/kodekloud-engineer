@@ -81,3 +81,4 @@
 - [Linux Configure sudo](/tasks/linux-configure-sudo/)
 - [Web Server Security](/tasks/web-server-security)
 - [Install a package](/tasks/install-a-package/)
+- [Linux GPG Encryption](/tasks/linux-gpg-encryption/)

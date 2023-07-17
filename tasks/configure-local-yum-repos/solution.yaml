@@ -1,0 +1,31 @@
+- hosts: nautilus_backup_server
+  gather_facts: false
+  become: true
+
+  vars:
+    downloaded_rpms: /packages/downloaded_rpms/
+    yum_repo: localyum
+    package: wget
+    base_repo: /etc/yum.repos.d/CentOS-Base.repo
+
+  tasks:
+    - name: Configure local repos
+      yum_repository:
+        name: "{{ yum_repo }}"
+        description: Local yum repos
+        baseurl: "file://{{ downloaded_rpms }}"
+        gpgcheck: false
+        enabled: true
+        priority: "1"
+    - name: Disable base repository to prevent install from base
+      lineinfile:
+        path: "{{ base_repo }}"
+        regexp: '^name=CentOS-7 - Base'
+        state: present
+        line: |
+          name=CentOS-7 - Base
+          enabled=0
+    - name: Install {{ package }} package
+      package:
+        name: "{{ package }}*"
+        state: present

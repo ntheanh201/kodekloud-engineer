@@ -45,8 +45,10 @@ NameVirtualHost *:8083
 echo "Ir0nM@n" | sudo -S systemctl restart httpd
 
 
-# Check iptables
+# How to check
+curl -vL http://stapp01.stratos.xfusioncorp.com:8083
 
+curl -vL http://stapp01.stratos.xfusioncorp.com:8083/blog
 
 ```
 

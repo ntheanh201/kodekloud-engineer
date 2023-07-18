@@ -85,3 +85,5 @@
 - [Configure Local Yum repos](/tasks/configure-local-yum-repos/)
 - [Setup SSL for Nginx](/tasks/setup-ssl-nginx/)
 - [Linux Bash Scripts](/tasks/linux-bash-scripts)
+- [Application Security](/tasks/application-security/)
+- [Apache Redirects](/tasks/apache-redirects/)

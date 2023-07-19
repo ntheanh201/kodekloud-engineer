@@ -41,7 +41,7 @@
 
 - Clone the repository: `git clone https://github.com/ntheanh201/kodekloud-engineer-ansible.git`
 - Go to folder: `cd kodekloud-engineer-ansible`
-- Install Ansible: `source ./install_ansible.sh`
+- Install Ansible: `./install_ansible.sh`
 - Solve task by running Ansible playbook
 
 # Ansible

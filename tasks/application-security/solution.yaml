@@ -1,8 +1,33 @@
-- hosts: nautilus_apps
+- hosts: nautilus_backup_server
   gather_facts: false
   become: true
 
+  vars:
+    nginx_port: 8093
+    apache_port: 6100
+
   tasks:
-    - name: Hello World
-      debug:
-        msg: "Hello World"
+    - name: Install iptables-services package
+      package:
+        name: iptables-services
+        state: present
+    - name: Add iptables rules drop incoming connections to Apache
+      iptables:
+        chain: INPUT
+        protocol: tcp
+        destination_port: "{{ apache_port }}"
+        jump: DROP
+      ignore_errors: yes  # Ignore errors if the rule already exists
+    - name: Add iptables rules accept incoming connections to Nginx
+      iptables:
+        chain: INPUT
+        protocol: tcp
+        destination_port: "{{ nginx_port }}"
+        jump: ACCEPT
+    - name: Save iptables rules
+      shell: "sudo service iptables save"
+    - name: Enable iptables service
+      service:
+        name: iptables
+        state: started
+        enabled: true

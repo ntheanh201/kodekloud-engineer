@@ -22,6 +22,8 @@ iptables -A INPUT -p tcp --dport 6100 -j ACCEPT
 
 sudo service iptables save
 
+# /etc/sysconfig/iptables
+
 sudo systemctl enable iptables
 ```
 

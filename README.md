@@ -2,15 +2,15 @@
 
 - Jumphost: `CentOS 8`
 
-  - user: `thor`
-  - password: `mjolnir123`
+    - user: `thor`
+    - password: `mjolnir123`
 
 - Nautilus App Servers: `CentOS 7`
 
 # Common Linux commands
 
 | Service Name             | Command                     |
-| ------------------------ | --------------------------- |
+|--------------------------|-----------------------------|
 | Nautilus App 1           | `ssh tony@172.16.238.10`    |
 | Nautilus App 2           | `ssh steve@172.16.238.11`   |
 | Nautilus App 3           | `ssh banner@172.16.238.12`  |
@@ -26,7 +26,7 @@
 `sudo yum install sshpass -y`
 
 | Service Name             | Command                                                                    |
-| ------------------------ | -------------------------------------------------------------------------- |
+|--------------------------|----------------------------------------------------------------------------|
 | Nautilus App 1           | `sshpass -p Ir0nM@n ssh -o StrictHostKeyChecking=no tony@172.16.238.10`    |
 | Nautilus App 2           | `sshpass -p Am3ric@ ssh -o StrictHostKeyChecking=no steve@172.16.238.11`   |
 | Nautilus App 3           | `sshpass -p BigGr33n ssh -o StrictHostKeyChecking=no banner@172.16.238.12` |
@@ -87,3 +87,4 @@
 - [Linux Bash Scripts](/tasks/linux-bash-scripts)
 - [Application Security](/tasks/application-security/)
 - [Apache Redirects](/tasks/apache-redirects/)
+- [Add Response Headers in Apache](/tasks/add-response-headers-in-apache)

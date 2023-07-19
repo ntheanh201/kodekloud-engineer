@@ -1,0 +1,36 @@
+- hosts: nautilus_app1
+  gather_facts: false
+  become: true
+
+  vars:
+    apache_server: httpd
+    port: 8085
+    apache_dir: /var/www/html
+    apache_conf: /etc/httpd/conf/httpd.conf
+
+  tasks:
+    - name: Install {{ apache_server }} package
+      package:
+        name: "{{ apache_server }}"
+        state: present
+    - name: Configure port Apache server
+      lineinfile:
+        path: "{{ apache_conf }}"
+        regexp: "^Listen"
+        line: "Listen {{ port }}"
+    - name: Apache's default content
+      copy:
+        dest: "{{ apache_dir }}/index.html"
+        content: |
+          Welcome to the xFusionCorp Industries!
+    - name: Configure response headers
+      lineinfile:
+        path: "{{ apache_conf }}"
+        line: |
+          Header set X-XSS-Protection "1; mode=block"
+          Header always append X-Frame-Options SAMEORIGIN
+          Header set X-Content-Type-Options nosniff
+    - name: Start Apache server
+      service:
+        name: "{{ apache_server }}"
+        state: started

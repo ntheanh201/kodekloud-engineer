@@ -1,18 +1,35 @@
-- hosts: nautilus_app1
+- hosts: nautilus_app3
   gather_facts: false
-  become: true
+  become: false
 
   vars:
-    zip_name: /backup/xfusioncorp_ecommerce.zip
-    zip_dir: /var/www/html/ecommerce
+    script_file: /scripts/news_backup.sh
+    zip_name: /backup/xfusioncorp_news.zip
+    zip_dir: /var/www/html/news
     backup_dir: /backup/
+    backup_server_connection: clint@172.16.238.16
+    backup_server_password: H@wk3y3
 
   tasks:
-    - name: Create a zip archive
-      archive:
-        path: "{{ zip_dir }}"
-        dest: "{{ zip_name }}"
-        format: zip
-    - name: Copy backup zip to backup server
-      synchronize: "src={{ zip_name }} dest={{ backup_dir }}"
-      delegate_to: nautilus_backup_server
+    - name: Install sshpass package
+      package:
+        name: sshpass
+        state: present
+      become: true
+    - name: Create script file
+      copy:
+        dest: "{{ script_file }}"
+        content: |
+          zip -r {{ zip_name }} {{ zip_dir }}
+          scp {{ zip_name }} {{ backup_server_connection }}:{{ backup_dir }}
+        mode: "775"
+    - name: Create .ssh directory
+      file:
+        path: " /home/{{ ansible_ssh_user }}/.ssh"
+        state: directory
+        owner: "{{ ansible_ssh_user }}"
+        group: "{{ ansible_ssh_user }}"
+    - name: Gen SSH key
+      shell: "ssh-keygen -t rsa -b 4096 -f /home/{{ ansible_ssh_user }}/.ssh/id_rsa -q -N ''"
+    - name: ssh-copy-id
+      shell: "sshpass -p {{ backup_server_password }} ssh-copy-id -i /home/{{ ansible_ssh_user }}/.ssh/id_rsa.pub {{ backup_server_connection }} -f -o StrictHostKeyChecking=no"

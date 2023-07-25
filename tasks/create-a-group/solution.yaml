@@ -1,0 +1,18 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    group: nautilus_sftp_users
+    user: sonya
+
+  tasks:
+    - name: Create group {{ group }}
+      group:
+        name: "{{ group }}"
+        state: present
+    - name: Add user {{ user }} to group {{ group }}
+      user:
+        name: "{{ user }}"
+        group: "{{ group }}"
+        state: present

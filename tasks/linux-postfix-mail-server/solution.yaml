@@ -1,0 +1,18 @@
+- hosts: nautilus_mail_server
+  gather_facts: false
+  become: true
+
+  vars:
+    email_account: mark@stratos.xfusioncorp.com
+    email_password: 8FmzjvFU6S
+    mail_dir: /home/mark/Maildir
+
+  tasks:
+    - name: Install require packages
+      package:
+        name: "{{ item }}"
+      with_items:
+        - "postfix"
+        - "dovecot"
+    - name: Create email account
+    

@@ -1,0 +1,13 @@
+- hosts: nautilus_app2
+  gather_facts: false
+  become: true
+
+  vars:
+    user: yousuf
+
+  tasks:
+    - name: Create user {{ user }}
+      user:
+        name: "{{ user }}"
+        uid: 1148
+        home: /var/www/yousuf

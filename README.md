@@ -90,3 +90,4 @@
 - [Add Response Headers in Apache](/tasks/add-response-headers-in-apache)
 - [Linux Postfix Mail Server](/tasks/linux-postfix-mail-server/)
 - [Create a group](/tasks/create-a-group/)
+- [Create a user](/tasks/create-a-user/)

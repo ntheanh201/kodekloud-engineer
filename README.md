@@ -79,6 +79,7 @@
 - [Linux Access Control List](/curriculum/linux/level-1/linux-access-control-list/)
 - [Linux User Files](/curriculum/linux/level-1/linux-user-files/)
 - [Linux Remote Copy](/curriculum/linux/level-1/linux-remote-copy/)
+- [Cron schedule deny to users](/curriculum/linux/level-1/cron-schedule-deny-to-users)
 
 ### Level 2
 

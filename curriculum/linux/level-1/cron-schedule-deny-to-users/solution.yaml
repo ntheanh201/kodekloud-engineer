@@ -1,0 +1,17 @@
+- hosts: nautilus_app1
+  gather_facts: false
+  become: true
+
+  vars:
+    allowed_user: siva
+    denied_user: rod
+
+  tasks:
+    - name: Grant crontab access to {{ allowed_user }}
+      lineinfile:
+        path: /etc/cron.allow
+        line: "{{ allowed_user }}"
+    - name: Deny crontab access to {{ denied_user }}
+      lineinfile:
+        path: /etc/cron.deny
+        line: "{{ denied_user }}"

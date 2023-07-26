@@ -111,6 +111,8 @@
 
 ### Level 1
 
+- [Create Pods in Kubernetes Cluster](/curriculum/kubernetes/level-1/create-pods-in-k8s-cluster)
+
 ## Ansible
 
 - See: [Ansible](/curriculum/ansible)

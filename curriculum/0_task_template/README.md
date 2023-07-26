@@ -6,4 +6,4 @@
 
 ### Solution
 
-- See: [Ansible solution](./solution.yaml)
+- See: [Solution](./solution.yaml)

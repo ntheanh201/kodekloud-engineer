@@ -48,46 +48,89 @@
 
 ## Test environment
 
-`ansible-playbook -i test-environments tasks/../solution.yaml`
+`ansible-playbook -i test-environments curriculum/../solution.yaml`
 
 ## Nautilus environment
 
-`ansible-playbook -i environments tasks/../solution.yaml`
+`ansible-playbook -i environments curriculum/../solution.yaml`
 
-# Tasks
+# Curriculum
 
-- [Linux Timezones Setting](/tasks/linux-timezones-setting/)
-- [Linux User Expiry](/tasks/linux-user-expiry/)
-- [Linux User with Non-interactive Shell](/tasks/linux-user-with-non-interactive-shell/)
-- [Linux User Without Home](/tasks/linux-user-without-home/)
-- [Linux File Permissions](/tasks/linux-file-permissions/)
-- [Selinux Installation](/tasks/selinux-installation/)
-- [Linux Run Levels](/tasks/linux-run-levels/)
-- [Create a Cron Job](/tasks/create-a-cron-job/)
-- [Linux Postfix Troubleshooting](/tasks/linux-postfix-troubleshooting/)
-- [Linux String Substitute](/tasks/linux-string-substitute/)
-- [Linux User Files](/tasks/linux-user-files/)
-- [Linux Remote Copy](/tasks/linux-remote-copy/)
-- [MariaDB Troubleshooting](/tasks/mariadb-troubleshooting/)
-- [Disable Root Login](/tasks/disable-root-login/)
-- [Linux Services](/tasks/linux-services/)
-- [Linux Banner](/tasks/linux-banner)
-- [Linux Collaborative Directories](/tasks/linux-collaborative-directories/)
-- [DNS Troubleshooting](/tasks/dns-troubleshooting/)
-- [Linux NTP Setup](/tasks/linux-ntp-setup/)
-- [Linux SSH Authentication](/tasks/linux-ssh-authentication/)
-- [Linux Find Command](/tasks/linux-find-command/)
-- [Linux LogRotate](/tasks/linux-log-rotate/)
-- [Linux Configure sudo](/tasks/linux-configure-sudo/)
-- [Web Server Security](/tasks/web-server-security)
-- [Install a package](/tasks/install-a-package/)
-- [Linux GPG Encryption](/tasks/linux-gpg-encryption/)
-- [Configure Local Yum repos](/tasks/configure-local-yum-repos/)
-- [Setup SSL for Nginx](/tasks/setup-ssl-nginx/)
-- [Linux Bash Scripts](/tasks/linux-bash-scripts)
-- [Application Security](/tasks/application-security/)
-- [Apache Redirects](/tasks/apache-redirects/)
-- [Add Response Headers in Apache](/tasks/add-response-headers-in-apache)
-- [Linux Postfix Mail Server](/tasks/linux-postfix-mail-server/)
-- [Create a group](/tasks/create-a-group/)
-- [Create a user](/tasks/create-a-user/)
+## Linux
+
+- See: [Linux](/curriculum/linux)
+
+### Level 1
+
+- [Linux Timezones Setting](/curriculum/linux/level-1/linux-timezones-setting/)
+- [Linux User Expiry](/curriculum/linux/level-1/linux-user-expiry/)
+- [Linux User with Non-interactive Shell](/curriculum/linux/level-1/linux-user-with-non-interactive-shell/)
+- [Linux User Without Home](/curriculum/linux/level-1/linux-user-without-home/)
+- [Linux File Permissions](/curriculum/linux/level-1/linux-file-permissions/)
+- [Selinux Installation](/curriculum/linux/level-1/selinux-installation/)
+- [Linux Run Levels](/curriculum/linux/level-1/linux-run-levels/)
+- [Disable Root Login](/curriculum/linux/level-1/disable-root-login/)
+- [Linux NTP Setup](/curriculum/linux/level-1/linux-ntp-setup/)
+- [Web Server Security](/curriculum/linux/level-1/web-server-security)
+- [Setup SSL for Nginx](/curriculum/linux/level-1/setup-ssl-nginx/)
+- [Linux Postfix Mail Server](/curriculum/linux/level-1/linux-postfix-mail-server/)
+- [Create a group](/curriculum/linux/level-1/create-a-group/)
+- [Create a user](/curriculum/linux/level-1/create-a-user/)
+- [Linux Access Control List](/curriculum/linux/level-1/linux-access-control-list/)
+- [Linux User Files](/curriculum/linux/level-1/linux-user-files/)
+- [Linux Remote Copy](/curriculum/linux/level-1/linux-remote-copy/)
+
+### Level 2
+
+- [Create a Cron Job](/curriculum/linux/level-2/create-a-cron-job/)
+- [Linux Postfix Troubleshooting](/curriculum/linux/level-2/linux-postfix-troubleshooting/)
+- [Linux String Substitute](/curriculum/linux/level-2/linux-string-substitute/)
+- [MariaDB Troubleshooting](/curriculum/linux/level-2/mariadb-troubleshooting/)
+- [Linux Services](/curriculum/linux/level-2/linux-services/)
+- [Linux Banner](/curriculum/linux/level-2/linux-banner)
+- [Linux Collaborative Directories](/curriculum/linux/level-2/linux-collaborative-directories/)
+- [DNS Troubleshooting](/curriculum/linux/level-2/dns-troubleshooting/)
+- [Linux SSH Authentication](/curriculum/linux/level-2/linux-ssh-authentication/)
+- [Linux Find Command](/curriculum/linux/level-2/linux-find-command/)
+- [Linux LogRotate](/curriculum/linux/level-2/linux-log-rotate/)
+- [Linux Configure sudo](/curriculum/linux/level-2/linux-configure-sudo/)
+- [Install a package](/curriculum/linux/level-2/install-a-package/)
+- [Linux GPG Encryption](/curriculum/linux/level-2/linux-gpg-encryption/)
+- [Configure Local Yum repos](/curriculum/linux/level-2/configure-local-yum-repos/)
+- [Linux Bash Scripts](/curriculum/linux/level-2/linux-bash-scripts)
+- [Application Security](/curriculum/linux/level-2/application-security/)
+- [Add Response Headers in Apache](/curriculum/linux/level-2/add-response-headers-in-apache)
+
+### Level 3
+
+- [Apache Redirects](/curriculum/linux/level-3/apache-redirects/)
+
+## Kubernetes
+
+- See: [Kubernetes](/curriculum/kubernetes)
+
+### Level 1
+
+## Ansible
+
+- See: [Ansible](/curriculum/ansible)
+
+## Docker
+
+- See: [Docker](/curriculum/docker)
+
+## Git
+
+- See: [Git](/curriculum/git)
+
+## Jenkins
+
+- See: [Jenkins](/curriculum/jenkins)
+
+## Cloud (AWS) - Coming Soon
+
+## Cloud (Azure) - Coming Soon
+
+## Cloud (GCP) - Coming Soon
+
+## Projects - Coming Soon

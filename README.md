@@ -115,6 +115,10 @@
 ### Level 1
 
 - [Create Pods in Kubernetes Cluster](/curriculum/kubernetes/level-1/create-pods-in-k8s-cluster)
+- [Create Deployments in Kubernetes Cluster](/curriculum/kubernetes/level-1/create-deployments-in-k8s-cluster)
+- [Create Namespaces in Kubernetes Cluster](/curriculum/kubernetes/level-1/create-namespaces-in-k8s-cluster)
+- [Set Limits for Resources in Kubernetes](/curriculum/kubernetes/level-1/set-limits-for-resources-in-k8s)
+- [Rolling Updates in Kubernetes](/curriculum/kubernetes/level-1/rolling-updates-in-k8s)
 
 ## Ansible
 

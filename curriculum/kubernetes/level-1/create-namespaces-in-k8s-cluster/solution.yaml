@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dev-nginx-pod
+  namespace: dev
+  labels:
+    app: dev-nginx-pod
+spec:
+  containers:
+    - name: dev-nginx-pod
+      image: nginx:latest
+      imagePullPolicy: IfNotPresent
+  restartPolicy: Always

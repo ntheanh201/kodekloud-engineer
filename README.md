@@ -80,6 +80,8 @@
 - [Linux User Files](/curriculum/linux/level-1/linux-user-files/)
 - [Linux Remote Copy](/curriculum/linux/level-1/linux-remote-copy/)
 - [Cron schedule deny to users](/curriculum/linux/level-1/cron-schedule-deny-to-users)
+- [Linux Firewalld Rules](/curriculum/linux/level-1/linux-firewalld-rules)
+- [Linux Resource Limits](/curriculum/linux/level-1/linux-resource-limits)
 
 ### Level 2
 

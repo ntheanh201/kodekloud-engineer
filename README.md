@@ -119,6 +119,8 @@
 - [Create Namespaces in Kubernetes Cluster](/curriculum/kubernetes/level-1/create-namespaces-in-k8s-cluster)
 - [Set Limits for Resources in Kubernetes](/curriculum/kubernetes/level-1/set-limits-for-resources-in-k8s)
 - [Rolling Updates in Kubernetes](/curriculum/kubernetes/level-1/rolling-updates-in-k8s)
+- [Rollback a Deployment in Kubernetes](/curriculum/kubernetes/level-1/rollback-a-deployment-in-k8s)
+- [Create Replicaset in Kubernetes Cluster](/curriculum/kubernetes/level-1/create-replicaset-in-k8s-cluster)
 
 ## Ansible
 

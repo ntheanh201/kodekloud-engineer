@@ -2,8 +2,6 @@
 
 ### Problem
 
-### Debugging
-
 ### Solution
 
 - See: [Solution](./solution.yaml)

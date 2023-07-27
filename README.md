@@ -25,22 +25,22 @@
 
 `sudo yum install sshpass -y`
 
-| Service Name             | Command                                                                    |
-|--------------------------|----------------------------------------------------------------------------|
-| Nautilus App 1           | `sshpass -p Ir0nM@n ssh -o StrictHostKeyChecking=no tony@172.16.238.10`    |
-| Nautilus App 2           | `sshpass -p Am3ric@ ssh -o StrictHostKeyChecking=no steve@172.16.238.11`   |
-| Nautilus App 3           | `sshpass -p BigGr33n ssh -o StrictHostKeyChecking=no banner@172.16.238.12` |
-| Nautilus HTTP LBR        | `sshpass -p Mischi3f ssh -o StrictHostKeyChecking=no loki@172.16.238.14`   |
-| Nautilus DB Server       | `sshpass -p 'Sp!dy' ssh -o StrictHostKeyChecking=no peter@172.16.239.10`   |
-| Nautilus Storage Server  | `sshpass -p Bl@kW ssh -o StrictHostKeyChecking=no natasha@172.16.238.15`   |
-| Nautilus Backup Server   | `sshpass -p H@wk3y3 ssh -o StrictHostKeyChecking=no clint@172.16.238.16`   |
-| Nautilus Mail Server     | `sshpass -p Gr00T123 ssh -o StrictHostKeyChecking=no groot@172.16.238.17`  |
-| Jenkins Server for CI/CD | `sshpass -p j@rv!s ssh -o StrictHostKeyChecking=no jenkins@172.16.238.19`  |
+| Service Name             | Command                                                                     |
+|--------------------------|-----------------------------------------------------------------------------|
+| Nautilus App 1           | `sshpass -p Ir0nM@n ssh -o StrictHostKeyChecking=no tony@172.16.238.10`     |
+| Nautilus App 2           | `sshpass -p Am3ric@ ssh -o StrictHostKeyChecking=no steve@172.16.238.11`    |
+| Nautilus App 3           | `sshpass -p BigGr33n ssh -o StrictHostKeyChecking=no banner@172.16.238.12`  |
+| Nautilus HTTP LBR        | `sshpass -p Mischi3f ssh -o StrictHostKeyChecking=no loki@172.16.238.14`    |
+| Nautilus DB Server       | `sshpass -p 'Sp!dy' ssh -o StrictHostKeyChecking=no peter@172.16.239.10`    |
+| Nautilus Storage Server  | `sshpass -p Bl@kW ssh -o StrictHostKeyChecking=no natasha@172.16.238.15`    |
+| Nautilus Backup Server   | `sshpass -p H@wk3y3 ssh -o StrictHostKeyChecking=no clint@172.16.238.16`    |
+| Nautilus Mail Server     | `sshpass -p Gr00T123 ssh -o StrictHostKeyChecking=no groot@172.16.238.17`   |
+| Jenkins Server for CI/CD | `sshpass -p 'j@rv!s' ssh -o StrictHostKeyChecking=no jenkins@172.16.238.19` |
 
 # Getting Started
 
-- Clone the repository: `git clone https://github.com/ntheanh201/kodekloud-engineer-ansible.git`
-- Go to folder: `cd kodekloud-engineer-ansible`
+- Clone the repository: `git clone https://github.com/ntheanh201/kodekloud-engineer.git`
+- Go to folder: `cd kodekloud-engineer`
 - Install Ansible: `./install_ansible.sh`
 - Solve task by running Ansible playbook
 
@@ -137,6 +137,10 @@
 ## Jenkins
 
 - See: [Jenkins](/curriculum/jenkins)
+
+### Level 1
+
+- [Jenkins Installation](/curriculum/jenkins/level-1/jenkins-installation)
 
 ## Cloud (AWS) - Coming Soon
 

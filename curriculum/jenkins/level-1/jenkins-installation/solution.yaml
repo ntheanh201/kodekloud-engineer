@@ -1,0 +1,32 @@
+- hosts: jenkins_server
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Install mandatory packages
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - java-17-openjdk
+        - wget
+    - name: Add Jenkins repo
+      shell: |
+        sudo wget -O /etc/yum.repos.d/jenkins.repo \
+        https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    - name: Import Jenkins key
+      shell: "sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key"
+    - name: Install Jenkins
+      package:
+        name: jenkins
+        state: present
+    - name: Daemon reload
+      shell: "systemctl daemon-reload"
+    - name: Start jenkins
+      service:
+        name: jenkins
+        state: started
+        enabled: true
+    - name: Get initial admin password
+      debug:
+        msg: "{{ lookup('ansible.builtin.file', '/var/lib/jenkins/secrets/initialAdminPassword') }}"

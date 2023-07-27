@@ -32,4 +32,4 @@ nautilus_app3
 172.16.238.17 ansible_ssh_user=groot ansible_ssh_pass=Gr00T123 ansible_sudo_pass=Gr00T123
 
 [jenkins_server]
-172.16.238.19 ansible_ssh_user=jenkins ansible_ssh_pass=j@rv!s ansible_sudo_pass=j@rv!s
+172.16.238.19 ansible_ssh_user=root ansible_ssh_pass=S3curePass ansible_sudo_pass=j@rv!s

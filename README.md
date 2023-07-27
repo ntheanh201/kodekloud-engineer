@@ -141,6 +141,7 @@
 ### Level 1
 
 - [Jenkins Installation](/curriculum/jenkins/level-1/jenkins-installation)
+- [Jenkins Install Packages](/curriculum/jenkins/level-1/jenkins-install-packages)
 
 ## Cloud (AWS) - Coming Soon
 

@@ -121,6 +121,13 @@
 - [Rolling Updates in Kubernetes](/curriculum/kubernetes/level-1/rolling-updates-in-k8s)
 - [Rollback a Deployment in Kubernetes](/curriculum/kubernetes/level-1/rollback-a-deployment-in-k8s)
 - [Create Replicaset in Kubernetes Cluster](/curriculum/kubernetes/level-1/create-replicaset-in-k8s-cluster)
+- [Create Cronjobs in Kubernetes](/curriculum/kubernetes/level-1/create-cronjobs-in-k8s)
+- [Countdown job in Kubernetes](/curriculum/kubernetes/level-1/countdown-job-in-k8s)
+- [Kubernetes Time Check Pod](/curriculum/kubernetes/level-1/k8s-time-check-pod)
+- [Troubleshoot Issue With Pods](/curriculum/kubernetes/level-1/troubleshoot-issue-with-pods)
+- [Update an Existing Deployment in Kubernetes](/curriculum/kubernetes/level-1/update-an-existing-deployment-in-k8s)
+- [ReplicationController in Kubernetes](/curriculum/kubernetes/level-1/replication-controller-in-k8s)
+- [Fix Issue with VolumeMounts in Kubernetes](/curriculum/kubernetes/level-1/fix-issue-with-volume-mounts-in-k8s)
 
 ## Ansible
 

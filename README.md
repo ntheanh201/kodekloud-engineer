@@ -48,11 +48,11 @@
 
 ## Test environment
 
-`ansible-playbook -i test-environments curriculum/../solution.yaml`
+`ansible-playbook -i test-environments curriculum/<module_name>/<task>/<level>/solution.yaml`
 
 ## Nautilus environment
 
-`ansible-playbook -i environments curriculum/../solution.yaml`
+`ansible-playbook -i environments curriculum/<module_name>/<task>/<level>/solution.yaml`
 
 # Curriculum
 

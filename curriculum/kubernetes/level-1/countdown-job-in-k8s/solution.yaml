@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: countdown-nautilus
+spec:
+  template:
+    metadata:
+      name: countdown-nautilus
+    spec:
+      containers:
+        - name: container-countdown-nautilus
+          image: centos:latest
+          command: ["/bin/sh", "-c", "sleep 5"]
+      restartPolicy: Never
+  backoffLimit: 4

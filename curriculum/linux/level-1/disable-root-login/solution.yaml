@@ -9,7 +9,7 @@
     - name: Disable SSH login
       lineinfile:
         path: /etc/ssh/sshd_config
-        regexp: '^#PermitRootLogin yes'
+        regexp: '^PermitRootLogin yes'
         line: PermitRootLogin no
     - name: Restart SSH service
       service:

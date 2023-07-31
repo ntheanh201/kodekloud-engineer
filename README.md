@@ -129,17 +129,33 @@
 - [ReplicationController in Kubernetes](/curriculum/kubernetes/level-1/replication-controller-in-k8s)
 - [Fix Issue with VolumeMounts in Kubernetes](/curriculum/kubernetes/level-1/fix-issue-with-volume-mounts-in-k8s)
 
+### Level 2
+
 ## Ansible
 
 - See: [Ansible](/curriculum/ansible)
+
+### Level 1
 
 ## Docker
 
 - See: [Docker](/curriculum/docker)
 
+### Level 1
+
 ## Git
 
 - See: [Git](/curriculum/git)
+
+### Level 1
+
+- [Git Install and Create Bare Repository](/curriculum/git/level-1/git-install-and-create-bare-repository)
+- [Git Clone Repositories](/curriculum/git/level-1/git-clone-repositories)
+- [Git Fork a Repository](/curriculum/git/level-1/git-fork-a-repository)
+- [Git Repository Update](/curriculum/git/level-1/git-repository-update)
+- [Git Delete Branches](/curriculum/git/level-1/git-delete-branches)
+
+### Level 2
 
 ## Jenkins
 
@@ -149,6 +165,8 @@
 
 - [Jenkins Installation](/curriculum/jenkins/level-1/jenkins-installation)
 - [Jenkins Install Packages](/curriculum/jenkins/level-1/jenkins-install-packages)
+
+### Level 2
 
 ## Cloud (AWS) - Coming Soon
 

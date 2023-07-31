@@ -1,4 +1,4 @@
-## KodeKloud task
+## Git Clone Repositories
 
 ### Problem
 
@@ -13,5 +13,6 @@ Clone this git repository under /usr/src/kodekloudrepos directory. Please do not
 ### Solution
 
 ```shell
-
+cd /usr/src/kodekloudrepos/
+git clone /opt/cluster.git
 ```

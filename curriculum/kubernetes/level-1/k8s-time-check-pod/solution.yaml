@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: datacenter
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: time-config
+  namespace: datacenter
+data:
+  TIME_FREQ: "11"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: time-check
+  namespace: datacenter
+spec:
+  containers:
+    - name: time-check
+      image: busybox:latest
+      imagePullPolicy: IfNotPresent
+      envFrom:
+        - configMapRef:
+            name: time-config
+      volumeMounts:
+        - mountPath: /opt/security/time
+          name: log-volume
+      command:
+        - /bin/sh
+        - -c
+      args:
+        - while true; do date; sleep $TIME_FREQ;done > /opt/security/time/time-check.log
+  restartPolicy: Always
+  volumes:
+    - name: log-volume
+      emptyDir: {}
+---

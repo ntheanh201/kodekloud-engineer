@@ -103,6 +103,7 @@
 - [Linux Bash Scripts](/curriculum/linux/level-2/linux-bash-scripts)
 - [Application Security](/curriculum/linux/level-2/application-security/)
 - [Add Response Headers in Apache](/curriculum/linux/level-2/add-response-headers-in-apache)
+- [Install Ansible](/curriculum/linux/level-2/install-ansible)
 
 ### Level 3
 

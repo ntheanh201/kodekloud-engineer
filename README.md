@@ -73,7 +73,6 @@
 - [Linux NTP Setup](/curriculum/linux/level-1/linux-ntp-setup/)
 - [Web Server Security](/curriculum/linux/level-1/web-server-security)
 - [Setup SSL for Nginx](/curriculum/linux/level-1/setup-ssl-nginx/)
-- [Linux Postfix Mail Server](/curriculum/linux/level-1/linux-postfix-mail-server/)
 - [Create a group](/curriculum/linux/level-1/create-a-group/)
 - [Create a user](/curriculum/linux/level-1/create-a-user/)
 - [Linux Access Control List](/curriculum/linux/level-1/linux-access-control-list/)
@@ -105,6 +104,7 @@
 - [Add Response Headers in Apache](/curriculum/linux/level-2/add-response-headers-in-apache)
 - [Install Ansible](/curriculum/linux/level-2/install-ansible)
 - [Linux Firewalld Setup](/curriculum/linux/level-2/linux-firewalld-setup)
+- [Linux Postfix Mail Server](/curriculum/linux/level-2/linux-postfix-mail-server/)
 
 ### Level 3
 

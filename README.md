@@ -104,6 +104,7 @@
 - [Application Security](/curriculum/linux/level-2/application-security/)
 - [Add Response Headers in Apache](/curriculum/linux/level-2/add-response-headers-in-apache)
 - [Install Ansible](/curriculum/linux/level-2/install-ansible)
+- [Linux Firewalld Setup](/curriculum/linux/level-2/linux-firewalld-setup)
 
 ### Level 3
 

@@ -1,0 +1,30 @@
+- hosts: nautilus_apps
+  gather_facts: false
+  become: true
+
+  vars:
+    allowed_port: 80
+    blocked_port: 8080
+
+  tasks:
+    - name: Start nginx & apache services
+      service:
+        name: "{{ item }}"
+        state: started
+      with_items:
+        - nginx
+        - httpd
+    - name: Install firewalld
+      package:
+        name: firewalld
+        state: present
+    - name: Start firewalld
+      service:
+        name: firewalld
+        state: started
+    - name: Allow Nginx port
+      shell: "sudo firewall-cmd --zone=public --permanent --add-port={{ allowed_port }}/tcp"
+    - name: Block Apache port
+      shell: "sudo firewall-cmd --zone=public --remove-port={{ blocked_port }}/tcp"
+    - name: Reload firewalld
+      shell: firewall-cmd --reload

@@ -1,0 +1,8 @@
+- hosts: stapp02
+  gather_facts: false
+
+  tasks:
+    - name: Create file
+      file:
+        dest: /tmp/file.txt
+        state: touch

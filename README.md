@@ -139,6 +139,14 @@
 
 ### Level 1
 
+- [Ansible Basic Playbook](/curriculum/ansible/level-1/ansible-basic-playbook)
+- [Ansible Inventory Update](/curriculum/ansible/level-1/ansible-inventory-update)
+- [Ansible Config File Update](/curriculum/ansible/level-1/ansible-config-file-update)
+- [Ansible Copy Module](/curriculum/ansible/level-1/ansible-copy-module)
+- [Ansible File Module](/curriculum/ansible/level-1/ansible-file-module)
+
+### Level 2
+
 ## Docker
 
 - See: [Docker](/curriculum/docker)
@@ -150,6 +158,8 @@
 - [Docker Delete Container](/curriculum/docker/level-1/docker-delete-container)
 - [Docker Copy Operations](/curriculum/docker/level-1/docker-copy-operations)
 - [Docker Container Issue](/curriculum/docker/level-1/docker-container-issue)
+
+### Level 2
 
 ## Git
 

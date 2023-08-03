@@ -1,0 +1,12 @@
+- hosts: stapps
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Create file
+      file:
+        dest: /usr/src/web.txt
+        state: touch
+        mode: 0644
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"

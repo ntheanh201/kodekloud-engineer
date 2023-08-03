@@ -133,6 +133,8 @@
 
 ### Level 2
 
+- [Kubernetes Shared Volumes](/curriculum/kubernetes/level-2/k8s-shared-volumes)
+
 ## Ansible
 
 - See: [Ansible](/curriculum/ansible)

@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-share-nautilus
+spec:
+  containers:
+    - name: volume-container-nautilus-1
+      image: ubuntu:latest
+      imagePullPolicy: IfNotPresent
+      command:
+        - /bin/sh
+        - -c
+      args:
+        - while true; do sleep 10; done
+      volumeMounts:
+        - mountPath: /tmp/official
+          name: volume-share
+    - name: volume-container-nautilus-2
+      image: ubuntu:latest
+      volumeMounts:
+        - name: volume-share
+          mountPath: /tmp/demo
+      command:
+        - /bin/sh
+        - -c
+      args:
+        - while true; do sleep 10; done
+  volumes:
+    - name: volume-share
+      emptyDir: {}
+  restartPolicy: Always

@@ -22,12 +22,6 @@ sure the playbook works this way without passing any extra arguments.
 ```shell
 cd playbook
 vi inventory
-
-[stapps]
-stapp01 ansible_host=172.16.238.10 ansible_user=tony ansible_ssh_pass=Ir0nM@n
-stapp02 ansible_host=172.16.238.11 ansible_user=steve ansible_ssh_pass=Am3ric@
-stapp03 ansible_host=172.16.238.12 ansible_user=banner ansible_ssh_pass=BigGr33n
-
 vi playbook.yml
 
 ansible-playbook -i inventory playbook.yml

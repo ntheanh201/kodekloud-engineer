@@ -1,0 +1,9 @@
+- hosts: nautilus_http_lbr
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Install HaProxy
+      package:
+        name: haproxy
+        state: present

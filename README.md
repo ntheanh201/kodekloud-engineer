@@ -106,6 +106,8 @@
 - [Linux Firewalld Setup](/curriculum/linux/level-2/linux-firewalld-setup)
 - [Linux Postfix Mail Server](/curriculum/linux/level-2/linux-postfix-mail-server/)
 - [Install and Configure HaProxy LBR](/curriculum/linux/level-2/install-and-configure-haproxy-lbr)
+- [Haproxy LBR Troubleshooting](/curriculum/linux/level-2/haproxy-lbr-troubleshooting)
+- [Apache Troubleshooting](/curriculum/linux/level-2/apache-troubleshooting)
 
 ### Level 3
 

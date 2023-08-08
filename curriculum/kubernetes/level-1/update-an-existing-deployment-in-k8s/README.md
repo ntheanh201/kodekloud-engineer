@@ -19,4 +19,9 @@ Note: The kubectl utility on jump_host has been configured to work with the kube
 
 ### Solution
 
+```shell
+kubectl patch svc nginx-service --type='json' -p '[{"op":"replace","path":"/spec/ports/0/nodePort","value":32165}]'
+kubectl patch deploy nginx-deployment --type='json' -p '[{"op":"replace","path":"/spec/replicas","value":5},{"op":"replace","path":"/spec/template/spec/containers/0/image","value":"nginx:latest"}]'
+```
+
 - See: [Solution](./solution.yaml)

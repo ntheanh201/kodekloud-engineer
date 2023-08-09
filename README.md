@@ -137,6 +137,16 @@
 ### Level 2
 
 - [Kubernetes Shared Volumes](/curriculum/kubernetes/level-2/k8s-shared-volumes)
+- [Kubernetes Sidecar Containers](/curriculum/kubernetes/level-2/k8s-sidecar-containers)
+- [Deploy Nginx Web Server on Kubernetes Cluster](/curriculum/kubernetes/level-2/deploy-nginx-webserver-on-k8s-cluster)
+- [Print Environment Variables](/curriculum/kubernetes/level-2/print-environment-variables)
+- [Rolling Updates And Rolling Back Deployments in Kubernetes](/curriculum/kubernetes/level-2/rolling-updates-and-rolling-back-deployments-in-k8s)
+- [Deploy Jenkins on Kubernetes](/curriculum/kubernetes/level-2/deploy-jenkins-on-k8s)
+- [Deploy Grafana on Kubernetes Cluster](/curriculum/kubernetes/level-2/deploy-grafana-on-k8s-cluster)
+- [Deploy Tomcat App on Kubernetes Cluster](/curriculum/kubernetes/level-2/deploy-tomcat-app-on-k8s)
+- [Deploy Node App on Kubernetes Cluster](/curriculum/kubernetes/level-2/deploy-node-app-on-k8s)
+- [Troubleshoot Deployment issues in Kubernetes](/curriculum/kubernetes/level-2/troubleshoot-deployment-issues-in-k8s)
+- [Fix issue with LAMP Environment in Kubernetes](/curriculum/kubernetes/level-2/fix-issue-with-lamp-environment-in-k8s)
 
 ## Ansible
 

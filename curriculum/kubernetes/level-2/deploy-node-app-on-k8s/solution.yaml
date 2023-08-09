@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deployment-xfusion
+  labels:
+    app: tomcat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      name: tomcat
+      labels:
+        app: tomcat
+    spec:
+      containers:
+        - name: tomcat-container-xfusion
+          image: gcr.io/kodekloud/centos-ssh-enabled:node
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-service-xfusion
+spec:
+  selector:
+    app: tomcat
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30012
+  type: NodePort

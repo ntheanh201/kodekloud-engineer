@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: print-envars-greeting
+spec:
+  containers:
+    - name: print-env-container
+      image: bash
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: GREETING
+          value: Welcome to
+        - name: COMPANY
+          value: Stratos
+        - name: GROUP
+          value: Datacenter
+      command:
+        - echo
+      args: ["$(GREETING) $(COMPANY) $(GROUP)"]
+  restartPolicy: Always

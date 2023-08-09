@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ic-deploy-xfusion
+  labels:
+    app: ic-xfusion
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ic-xfusion
+  template:
+    metadata:
+      name: ic-xfusion
+      labels:
+        app: ic-xfusion
+    spec:
+      initContainers:
+        - name: ic-msg-xfusion
+          image: ubuntu:latest
+          command:
+            - /bin/bash
+            - -c
+          args:
+            - 'echo Init Done - Welcome to xFusionCorp Industries > /ic/ecommerce'
+          volumeMounts:
+            - name: ic-volume-xfusion
+              mountPath: /ic
+      containers:
+        - name: ic-main-xfusion
+          image: ubuntu:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent
+          command:
+            - /bin/bash
+            - -c
+          args:
+            - 'while true; do cat /ic/ecommerce; sleep 5; done'
+          volumeMounts:
+            - name: ic-volume-xfusion
+              mountPath: /ic
+      volumes:
+        - name: ic-volume-xfusion
+          emptyDir: {}
+      restartPolicy: Always

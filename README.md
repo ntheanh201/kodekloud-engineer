@@ -148,6 +148,12 @@
 - [Troubleshoot Deployment issues in Kubernetes](/curriculum/kubernetes/level-2/troubleshoot-deployment-issues-in-k8s)
 - [Fix issue with LAMP Environment in Kubernetes](/curriculum/kubernetes/level-2/fix-issue-with-lamp-environment-in-k8s)
 
+### Level 3
+
+- [Deploy Apache Web Server on Kubernetes Cluster](/curriculum/kubernetes/level-3/deploy-apache-web-server-on-k8s-cluster)
+- [Deploy LAMP Stack on Kubernetes Cluster](/curriculum/kubernetes/level-3/deploy-lamp-stack-on-k8s-cluster)
+- [Init Containers in Kubernetes](/curriculum/kubernetes/level-3/init-containers-in-k8s)
+
 ## Ansible
 
 - See: [Ansible](/curriculum/ansible)

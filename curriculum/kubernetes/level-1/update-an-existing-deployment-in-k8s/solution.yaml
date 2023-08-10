@@ -4,8 +4,6 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"nginx-app","type":"front-end"},"name":"nginx-deployment","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"nginx-app"}},"template":{"metadata":{"labels":{"app":"nginx-app"},"name":"nginx-replica"},"spec":{"containers":[{"image":"nginx:1.19","name":"nginx-container"}]}}}}
   labels:
     app: nginx-app
     type: front-end
@@ -45,9 +43,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"nginx-service","namespace":"default"},"spec":{"ports":[{"nodePort":30008,"port":80,"targetPort":80}],"selector":{"app":"nginx-app"},"type":"NodePort"}}
   name: nginx-service
   namespace: default
 spec:

@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: beta
+type: Opaque
+data:
+  beta: "NWVjdXIz"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secret-devops
+  labels:
+    app.kubernetes.io/name: pod-datacenter
+spec:
+  containers:
+    - name: secret-container-devops
+      image: centos:latest
+      imagePullPolicy: IfNotPresent
+      command:
+        - /bin/sh
+        - -c
+      args:
+        - sleep 1000
+      volumeMounts:
+        - mountPath: /opt/apps/beta.txt
+          name: secrets
+          subPath: beta.txt
+  volumes:
+    - name: secrets
+      secret:
+        secretName: beta
+        items:
+          - key: beta
+            path: beta.txt
+  restartPolicy: Always
+---

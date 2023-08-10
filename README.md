@@ -153,6 +153,8 @@
 - [Deploy Apache Web Server on Kubernetes Cluster](/curriculum/kubernetes/level-3/deploy-apache-web-server-on-k8s-cluster)
 - [Deploy LAMP Stack on Kubernetes Cluster](/curriculum/kubernetes/level-3/deploy-lamp-stack-on-k8s-cluster)
 - [Init Containers in Kubernetes](/curriculum/kubernetes/level-3/init-containers-in-k8s)
+- [Persistent Volumes in Kubernetes](/curriculum/kubernetes/level-3/persistent-volumes-in-k8s)
+- [Manage Secrets in Kubernetes](/curriculum/kubernetes/level-3/manage-secrets-in-k8s)
 
 ## Ansible
 

@@ -1,0 +1,119 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: iron-namespace-datacenter
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iron-gallery-deployment-datacenter
+  labels:
+    run: iron-gallery
+  namespace: iron-namespace-datacenter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: iron-gallery
+  template:
+    metadata:
+      name: iron-gallery
+      labels:
+        run: iron-gallery
+    spec:
+      containers:
+        - name: iron-gallery-container-datacenter
+          image: kodekloud/irongallery:2.0
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 50m
+              memory: 100Mi
+          volumeMounts:
+            - name: config
+              mountPath: /usr/share/nginx/html/data
+            - name: images
+              mountPath: /usr/share/nginx/html/uploads
+      volumes:
+        - name: config
+          emptyDir: {}
+        - name: images
+          emptyDir: {}
+      restartPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iron-db-deployment-datacenter
+  labels:
+    db: mariadb
+  namespace: iron-namespace-datacenter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      db: mariadb
+  template:
+    metadata:
+      name: mariadb
+      labels:
+        db: mariadb
+    spec:
+      containers:
+        - name: iron-db-container-datacenter
+          image: kodekloud/irondb:2.0
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MYSQL_DATABASE
+              value: database_apache
+            - name: MYSQL_ROOT_PASSWORD
+              value: fef
+            - name: MYSQL_PASSWORD
+              value: value
+            - name: MYSQL_USER
+              value: userff
+          resources:
+            limits:
+              cpu: 50m
+              memory: 100Mi
+          volumeMounts:
+            - name: db
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: db
+          emptyDir: {}
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: iron-db-service-datacenter
+  namespace: iron-namespace-datacenter
+spec:
+  selector:
+    db: mariadb
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: iron-gallery-service-datacenter
+  namespace: iron-namespace-datacenter
+spec:
+  selector:
+    run: iron-gallery
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 32678
+  type: NodePort

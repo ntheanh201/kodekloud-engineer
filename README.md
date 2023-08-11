@@ -158,6 +158,8 @@
 - [Environment Variables in Kubernetes](/curriculum/kubernetes/level-3/environment-variables-in-k8s)
 - [Kubernetes LEMP Setup](/curriculum/kubernetes/level-3/k8s-lemp-setup)
 - [Kubernetes Troubleshooting](/curriculum/kubernetes/level-3/k8s-troubleshooting)
+- [Deploy Iron Gallery App on Kubernetes](/curriculum/kubernetes/level-3/deploy-iron-gallery-app-on-k8s)
+- [Fix Python App Deployed on Kubernetes Cluster](/curriculum/kubernetes/level-3/fix-python-app-deployed-on-k8s-cluster)
 
 ## Ansible
 

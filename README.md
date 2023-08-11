@@ -155,6 +155,7 @@
 - [Init Containers in Kubernetes](/curriculum/kubernetes/level-3/init-containers-in-k8s)
 - [Persistent Volumes in Kubernetes](/curriculum/kubernetes/level-3/persistent-volumes-in-k8s)
 - [Manage Secrets in Kubernetes](/curriculum/kubernetes/level-3/manage-secrets-in-k8s)
+- [Environment Variables in Kubernetes](/curriculum/kubernetes/level-3/environment-variables-in-k8s)
 - [Kubernetes LEMP Setup](/curriculum/kubernetes/level-3/k8s-lemp-setup)
 - [Kubernetes Troubleshooting](/curriculum/kubernetes/level-3/k8s-troubleshooting)
 

@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-redis-config
+data:
+  redis.conf: |
+    maxmemory 2mb
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  labels:
+    app: redis-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-deployment
+  template:
+    metadata:
+      name: redis-deployment
+      labels:
+        app: redis-deployment
+    spec:
+      containers:
+        - name: redis-container
+          image: redis:alpine
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: "1"
+          volumeMounts:
+            - name: data
+              mountPath: /redis-master-data
+            - name: redis-config
+              mountPath: /redis-master
+          ports:
+            - containerPort: 6379
+      volumes:
+        - name: data
+          emptyDir: {}
+        - name: redis-config
+          configMap:
+            name: my-redis-config
+      restartPolicy: Always

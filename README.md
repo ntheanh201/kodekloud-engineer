@@ -161,6 +161,10 @@
 - [Deploy Iron Gallery App on Kubernetes](/curriculum/kubernetes/level-3/deploy-iron-gallery-app-on-k8s)
 - [Fix Python App Deployed on Kubernetes Cluster](/curriculum/kubernetes/level-3/fix-python-app-deployed-on-k8s-cluster)
 
+### Level 4
+
+- [Deploy Redis Deployment on Kubernetes](/curriculum/kubernetes/level-4/deploy-redis-deployment-on-k8s)
+
 ## Ansible
 
 - See: [Ansible](/curriculum/ansible)

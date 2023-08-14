@@ -164,6 +164,7 @@
 ### Level 4
 
 - [Deploy Redis Deployment on Kubernetes](/curriculum/kubernetes/level-4/deploy-redis-deployment-on-k8s)
+- [Deploy MySQL on Kubernetes](/curriculum/kubernetes/level-4/deploy-mysql-on-k8s)
 
 ## Ansible
 

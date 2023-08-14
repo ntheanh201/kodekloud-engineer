@@ -1,0 +1,116 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv
+spec:
+  storageClassName: "manual"
+  capacity:
+    storage: 250Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mysql
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+spec:
+  storageClassName: "manual"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 250Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      name: mysql
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: nginx-container
+          image: mysql:latest
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: mysql-pv
+              mountPath: /var/lib/mysql
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: mysql-root-pass
+            - name: MYSQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-db-url
+                  key: database
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-user-pass
+                  key: username
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-user-pass
+                  key: password
+      restartPolicy: Always
+      volumes:
+        - name: mysql-pv
+          persistentVolumeClaim:
+            claimName: mysql-pv-claim
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-root-pass
+type: Opaque
+stringData:
+  password: "YUIidhb667"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-user-pass
+type: Opaque
+stringData:
+  username: "kodekloud_tim"
+  password: "GyQkFRVNr3"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-db-url
+type: Opaque
+stringData:
+  database: "kodekloud_db4"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 3306
+      port: 3306
+      nodePort: 30007
+  selector:
+    app: mysql

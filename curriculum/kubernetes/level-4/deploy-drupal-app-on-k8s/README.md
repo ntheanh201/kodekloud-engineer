@@ -24,9 +24,4 @@ Note: The kubectl on jump_host has been configured to work with the kubernetes c
 
 ### Solution
 
-```shell
-kubectl cp /opt/index.php nginx-phpfpm:/var/www/html -c nginx-container
-kubectl  exec --stdin --tty nginx-phpfpm -c nginx-container -- /bin/bash
-```
-
 - See: [Solution](./solution.yaml)

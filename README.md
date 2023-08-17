@@ -166,6 +166,7 @@
 - [Deploy Redis Deployment on Kubernetes](/curriculum/kubernetes/level-4/deploy-redis-deployment-on-k8s)
 - [Deploy MySQL on Kubernetes](/curriculum/kubernetes/level-4/deploy-mysql-on-k8s)
 - [Kubernetes Nginx and PhpFPM Setup](/curriculum/kubernetes/level-4/deploy-mysql-on-k8s)
+- [Deploy Drupal App on Kubernetes](/curriculum/kubernetes/level-4/deploy-drupal-app-on-k8s)
 
 ## Ansible
 

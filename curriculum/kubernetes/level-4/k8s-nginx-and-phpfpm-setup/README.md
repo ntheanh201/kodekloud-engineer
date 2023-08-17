@@ -11,7 +11,7 @@ mentioned below:
 
 2.) Create a config map named nginx-config for nginx.conf as we want to add some custom settings in nginx.conf.
 
-a) Change the default port 80 to 8093 in nginx.conf.
+a) Change the default port 80 to 8091 in nginx.conf.
 
 b) Change the default document root /usr/share/nginx to /var/www/html in nginx.conf.
 
@@ -39,5 +39,10 @@ You can use any labels as per your choice.
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
 
 ### Solution
+
+```shell
+kubectl cp /opt/index.php nginx-phpfpm:/var/www/html -c nginx-container
+kubectl  exec --stdin --tty nginx-phpfpm -c nginx-container -- /bin/bash
+```
 
 - See: [Solution](./solution.yaml)

@@ -222,6 +222,10 @@
 
 ### Level 2
 
+- [Jenkins Views](/curriculum/jenkins/level-2/jenkins-views)
+- [Jenkins Parameterized Builds](/curriculum/jenkins/level-2/jenkins-parameterized-builds)
+- [Jenkins Workspaces](/curriculum/jenkins/level-2/jenkins-workspaces)
+
 ## Cloud (AWS) - Coming Soon
 
 ## Cloud (Azure) - Coming Soon

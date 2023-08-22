@@ -41,3 +41,14 @@ Note:
 ### Solution
 
 - Install Jenkins plugins: Git, Publish over SSH 
+- Manage Jenkins -> Add Credentials
+- Manage Jenkins -> Configure System -> Publish Over SSH
+*/$Branch
+- ![img.png](img.png)
+- ![img_1.png](img_1.png)
+- ![img_2.png](img_2.png)
+- ![img_3.png](img_3.png)
+- Manage Jenkins -> Configure System -> Publish over SSH
+- ![img_4.png](img_4.png)
+- Manage Jenkins -> Credentials -> System -> Global
+- ![img_5.png](img_5.png)

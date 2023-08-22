@@ -41,14 +41,15 @@ Note:
 ### Solution
 
 - Install Jenkins plugins: Git, Publish over SSH 
-- Manage Jenkins -> Add Credentials
-- Manage Jenkins -> Configure System -> Publish Over SSH
-*/$Branch
-- ![img.png](img.png)
-- ![img_1.png](img_1.png)
-- ![img_2.png](img_2.png)
-- ![img_3.png](img_3.png)
-- Manage Jenkins -> Configure System -> Publish over SSH
-- ![img_4.png](img_4.png)
-- Manage Jenkins -> Credentials -> System -> Global
-- ![img_5.png](img_5.png)
+  - Manage Jenkins -> Configure System -> Publish over SSH
+    ![publish_ssh.png](assets/publish_ssh.png)
+  - Manage Jenkins -> Credentials -> System -> Global
+    ![git_credentials.png](assets/git_credentials.png)
+- Configure job
+  ![job.png](assets/job.png)
+- Configure custom workspace
+  ![custom_workspace.png](assets/custom_workspace.png)
+- Configure Git
+  ![git.png](assets/git.png)
+- Configure Send files over SSH
+  ![ssh.png](assets/ssh.png)

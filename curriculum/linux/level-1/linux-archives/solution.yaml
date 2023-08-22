@@ -1,8 +1,0 @@
-- hosts: nautilus_apps
-  gather_facts: false
-  become: true
-
-  tasks:
-    - name: Hello World
-      debug:
-        msg: "Hello World"

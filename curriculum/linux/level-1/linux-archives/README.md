@@ -16,5 +16,3 @@ tar -czvf mariyam.tar.gz /data/mariyam
 mv mariyam.tar.gz /home
 
 ```
-
-- See: [Ansible solution](solution.yaml)

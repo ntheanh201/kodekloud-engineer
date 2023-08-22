@@ -38,3 +38,6 @@ Note:
 
     For these kind of scenarios requiring changes to be done in a web UI, please take screenshots so that you can share it with us for review in case your task is marked incomplete. You may also consider using a screen recording software such as loom.com to record and share your work.
 
+### Solution
+
+- Install Jenkins plugins: Git, Publish over SSH 

@@ -26,8 +26,6 @@ The following list provides a definition for each field:
 ```shell
 sudo vi /etc/security/limits.conf
 
-nfsuser          soft    nproc           1026
+nfsuser          soft    nproc           1025
 nfsuser          hard    nproc           2026
 ```
-
-- See: [Solution](./solution.yaml)

@@ -226,6 +226,7 @@
 - [Jenkins Parameterized Builds](/curriculum/jenkins/level-2/jenkins-parameterized-builds)
 - [Jenkins Workspaces](/curriculum/jenkins/level-2/jenkins-workspaces)
 - [Jenkins Database Backup Job](/curriculum/jenkins/level-2/jenkins-database-backup-job)
+- [Jenkins Scheduled Jobs](/curriculum/jenkins/level-2/jenkins-scheduled-jobs)
 
 ### Level 3
 

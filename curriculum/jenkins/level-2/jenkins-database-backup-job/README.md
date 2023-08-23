@@ -27,11 +27,11 @@ Note:
 
 ### Solution
 
-- Install Plugins: SSH, SSH Credentials, Publish over SSH
+- Install Plugins: SSH, SSH Credentials
 - Manage Jenkins -> Credentials -> Add Credentials -> Username with password
-  ![credentials](credentials.png)
+  ![credentials](assets/credentials.png)
 - Manage Jenkins -> Configure System -> Add SSH remote hosts
-  ![remote_hosts](remote_hosts.png)
+  ![remote_hosts](assets/remote_hosts.png)
 - Dashboard -> database-backup -> Configuration: Build Steps -> Execute shell on remote host
 
 - This way need to install sshpass on Nautilus DB Server (stdb01)

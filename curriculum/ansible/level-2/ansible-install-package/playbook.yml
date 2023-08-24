@@ -1,0 +1,8 @@
+- hosts: apps
+  gather_facts: false
+  become: true
+
+  tasks:
+    - yum:
+        name: samba
+        state: present

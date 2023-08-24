@@ -183,6 +183,9 @@
 
 ### Level 2
 
+- [Ansible Ping Module Usage](/curriculum/ansible/level-2/ansible-ping-module-usage)
+- [Ansible Install Package](/curriculum/ansible/level-2/ansible-install-package)
+
 ## Docker
 
 - See: [Docker](/curriculum/docker)

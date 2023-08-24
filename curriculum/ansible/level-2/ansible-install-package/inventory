@@ -1,0 +1,8 @@
+[apps]
+stapp01
+stapp02
+stapp03
+
+stapp01 ansible_ssh_user=tony ansible_ssh_pass=Ir0nM@n ansible_sudo_pass=Ir0nM@n
+stapp02 ansible_ssh_user=steve ansible_ssh_pass=Am3ric@ ansible_sudo_pass=Am3ric@
+stapp03 ansible_ssh_user=banner ansible_ssh_pass=BigGr33n ansible_sudo_pass=BigGr33n

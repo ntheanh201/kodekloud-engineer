@@ -185,6 +185,9 @@
 
 - [Ansible Ping Module Usage](/curriculum/ansible/level-2/ansible-ping-module-usage)
 - [Ansible Install Package](/curriculum/ansible/level-2/ansible-install-package)
+- [Ansible Archive Module](/curriculum/ansible/level-2/ansible-archive-module)
+- [Ansible Unarchive Module](/curriculum/ansible/level-2/ansible-unarchive-module)
+- [Ansible Blockinfile Module](/curriculum/ansible/level-2/ansible-blockinfile-module)
 
 ## Docker
 

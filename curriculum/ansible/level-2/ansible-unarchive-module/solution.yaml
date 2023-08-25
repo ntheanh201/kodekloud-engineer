@@ -1,0 +1,16 @@
+- hosts: stapp01, stapp02, stapp03
+  gather_facts: false
+  become: true
+
+  vars:
+    archive_file: /usr/src/dba/datacenter.zip
+    archive_dest: /opt/dba/
+
+  tasks:
+    - name: Unarchive
+      unarchive:
+        src: "{{ archive_file }}"
+        dest: "{{ archive_dest }}"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0755"

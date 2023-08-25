@@ -1,0 +1,42 @@
+- hosts: stapp01, stapp02, stapp03
+  gather_facts: false
+  become: true
+
+  vars:
+    deploy_file: /var/www/html/index.html
+
+  tasks:
+    - name: Install httpd
+      package:
+        name: httpd
+        state: present
+    - name: Create www directory
+      file:
+        path: /var/www
+        state: directory
+        owner: apache
+        group: apache
+        mode: "0644"
+    - name: Create html directory
+      file:
+        path: /var/www/html
+        state: directory
+        owner: apache
+        group: apache
+        mode: "0644"
+    - name: Create index.html file
+      file:
+        path: "{{ deploy_file }}"
+        state: touch
+        owner: apache
+        group: apache
+        mode: "0644"
+    - name: Add content
+      blockinfile:
+        path: "{{ deploy_file }}"
+        owner: apache
+        group: apache
+        block: |
+          Welcome to XfusionCorp!
+          This is Nautilus sample file, created using Ansible!
+          Please do not modify this file manually!

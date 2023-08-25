@@ -1,0 +1,16 @@
+- hosts: stapp01, stapp02, stapp03
+  gather_facts: false
+  become: true
+
+  vars:
+    archive_dir: /usr/src/finance/
+    archive_dest: /opt/finance/
+    archive_name: demo.tar.gz
+
+  tasks:
+    - name: Create archive
+      community.general.archive:
+        path: "{{ archive_dir }}"
+        dest: "{{ archive_dest }}/{{ archive_name }}"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"

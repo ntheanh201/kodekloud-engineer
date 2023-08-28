@@ -203,6 +203,8 @@
 
 ### Level 2
 
+- [Pull Docker Image](/curriculum/docker/level-2/pull-docker-image)
+
 ## Git
 
 - See: [Git](/curriculum/git)

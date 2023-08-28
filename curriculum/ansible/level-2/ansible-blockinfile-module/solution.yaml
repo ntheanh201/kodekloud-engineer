@@ -4,38 +4,25 @@
 
   vars:
     deploy_file: /var/www/html/index.html
+    mode: "0644"
 
   tasks:
     - name: Install httpd
       package:
         name: httpd
         state: present
-    - name: Create www directory
-      file:
-        path: /var/www
-        state: directory
-        owner: apache
-        group: apache
-        mode: "0644"
-    - name: Create html directory
-      file:
-        path: /var/www/html
-        state: directory
-        owner: apache
-        group: apache
-        mode: "0644"
-    - name: Create index.html file
-      file:
-        path: "{{ deploy_file }}"
-        state: touch
-        owner: apache
-        group: apache
-        mode: "0644"
+    - name: Enable httpd
+      service:
+        name: httpd
+        state: started
+        enabled: true
     - name: Add content
       blockinfile:
         path: "{{ deploy_file }}"
         owner: apache
         group: apache
+        create: true
+        mode: "{{ mode }}"
         block: |
           Welcome to XfusionCorp!
           This is Nautilus sample file, created using Ansible!

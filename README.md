@@ -204,6 +204,8 @@
 ### Level 2
 
 - [Pull Docker Image](/curriculum/docker/level-2/pull-docker-image)
+- [Docker Update Permissions](/curriculum/docker/level-2/docker-update-permissions)
+- [Create a Docker Image From Container](/curriculum/docker/level-2/create-a-docker-image-from-container)
 
 ## Git
 

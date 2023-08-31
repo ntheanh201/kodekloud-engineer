@@ -221,6 +221,8 @@
 
 ### Level 2
 
+- [Git Install and Create Repository](/curriculum/git/level-2/git-install-and-create-repository)
+
 ## Jenkins
 
 - See: [Jenkins](/curriculum/jenkins)

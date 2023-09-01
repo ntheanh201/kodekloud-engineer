@@ -17,5 +17,3 @@ mkdir /opt/demo.git
 cd /opt/demo
 git init
 ```
-
-- See: [Solution](./solution.yaml)

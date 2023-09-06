@@ -223,6 +223,10 @@
 
 ### Level 2
 
+- [Git Install and Create Repository](/curriculum/git/level-2/git-install-and-create-repository)
+- [Git Create Branches](/curriculum/git/level-2/git-create-branches)
+- [Git Merge Branches](/curriculum/git/level-2/git-merge-branches)
+
 ## Jenkins
 
 - See: [Jenkins](/curriculum/jenkins)

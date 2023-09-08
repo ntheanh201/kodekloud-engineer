@@ -226,6 +226,8 @@
 - [Git Install and Create Repository](/curriculum/git/level-2/git-install-and-create-repository)
 - [Git Create Branches](/curriculum/git/level-2/git-create-branches)
 - [Git Merge Branches](/curriculum/git/level-2/git-merge-branches)
+- [Git Manage Remotes](/curriculum/git/level-2/git-manage-remotes)
+- [Git Revert Some Changes](/curriculum/git/level-2/git-revert-some-changes)
 
 ## Jenkins
 

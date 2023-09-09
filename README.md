@@ -229,6 +229,10 @@
 - [Git Manage Remotes](/curriculum/git/level-2/git-manage-remotes)
 - [Git Revert Some Changes](/curriculum/git/level-2/git-revert-some-changes)
 
+### Level 3
+
+- [Git Cherry Pick](/curriculum/git/level-3/git-cherry-pick)
+
 ## Jenkins
 
 - See: [Jenkins](/curriculum/jenkins)

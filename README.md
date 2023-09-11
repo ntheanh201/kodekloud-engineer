@@ -232,6 +232,7 @@
 ### Level 3
 
 - [Git Cherry Pick](/curriculum/git/level-3/git-cherry-pick)
+- [Manage Git Pull Requests](/curriculum/git/level-3/git-manage-pull-requests)
 
 ## Jenkins
 

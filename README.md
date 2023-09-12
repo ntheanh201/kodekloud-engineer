@@ -234,6 +234,8 @@
 - [Git Cherry Pick](/curriculum/git/level-3/git-cherry-pick)
 - [Manage Git Pull Requests](/curriculum/git/level-3/git-manage-pull-requests)
 - [Git hard reset](/curriculum/git/level-3/git-hard-reset)
+- [Git Clean](/curriculum/git/level-3/git-clean)
+- [Git Stash](/curriculum/git/level-3/git-stash)
 
 ## Jenkins
 

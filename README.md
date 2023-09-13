@@ -209,6 +209,10 @@
 - [Docker EXEC Operations](/curriculum/docker/level-2/docker-exec-operations)
 - [Write a Docker File](/curriculum/docker/level-2/write-a-docker-file)
 
+### Level 3
+
+- [Create a Docker Network](/curriculum/docker/level-3/create-a-docker-network)
+
 ## Git
 
 - See: [Git](/curriculum/git)

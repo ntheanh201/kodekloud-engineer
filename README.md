@@ -212,6 +212,7 @@
 ### Level 3
 
 - [Create a Docker Network](/curriculum/docker/level-3/create-a-docker-network)
+- [Docker Volumes Mapping](/curriculum/docker/level-3/docker-volumes-mapping)
 
 ## Git
 

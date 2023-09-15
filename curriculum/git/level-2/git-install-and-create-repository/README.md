@@ -14,6 +14,6 @@ The Nautilus development team shared with the DevOps team requirements for new a
 sudo yum install -y git
 
 mkdir /opt/demo.git
-cd /opt/demo
+cd /opt/demo.git
 git init
 ```

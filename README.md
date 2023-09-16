@@ -214,6 +214,8 @@
 - [Create a Docker Network](/curriculum/docker/level-3/create-a-docker-network)
 - [Docker Volumes Mapping](/curriculum/docker/level-3/docker-volumes-mapping)
 - [Docker Ports Mapping](/curriculum/docker/level-3/docker-ports-mapping)
+- [Save, Load and Transfer Docker Image](/curriculum/docker/level-3/save-load-transfer-docker-image)
+- [Write a Docker Compose File](/curriculum/docker/level-3/write-a-docker-compose-file)
 
 ## Git
 

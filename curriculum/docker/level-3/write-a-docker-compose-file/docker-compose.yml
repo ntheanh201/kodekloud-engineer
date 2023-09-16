@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  httpd:
+    image: httpd:latest
+    container_name: httpd
+    ports:
+      - "6300:80"
+    volumes:
+      - /opt/dba:/usr/local/apache2/htdocs

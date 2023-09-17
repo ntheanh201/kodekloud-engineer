@@ -189,6 +189,10 @@
 - [Ansible Unarchive Module](/curriculum/ansible/level-2/ansible-unarchive-module)
 - [Ansible Blockinfile Module](/curriculum/ansible/level-2/ansible-blockinfile-module)
 
+### Level 3
+
+- [Creating Soft Links Using Ansible](/curriculum/ansible/level-3/create-soft-links-using-ansible)
+
 ## Docker
 
 - See: [Docker](/curriculum/docker)

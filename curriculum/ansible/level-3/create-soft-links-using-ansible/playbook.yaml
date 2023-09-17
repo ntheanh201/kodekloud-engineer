@@ -1,0 +1,48 @@
+- hosts: stapp01
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Create empty file
+      file:
+        dest: /opt/security/blog.txt
+        state: touch
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+    - name: Create symbolic link
+      file:
+        src: /opt/security
+        dest: /var/www/html
+        state: link
+
+- hosts: stapp02
+  gather_facts: false
+  become: true
+
+  tasks:
+    - file:
+        dest: /opt/security/story.txt
+        state: touch
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+    - name: Create symbolic link
+      file:
+        src: /opt/security
+        dest: /var/www/html
+        state: link
+
+- hosts: stapp03
+  gather_facts: false
+  become: true
+
+  tasks:
+    - file:
+        dest: /opt/security/media.txt
+        state: touch
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+    - name: Create symbolic link
+      file:
+        src: /opt/security
+        dest: /var/www/html
+        state: link

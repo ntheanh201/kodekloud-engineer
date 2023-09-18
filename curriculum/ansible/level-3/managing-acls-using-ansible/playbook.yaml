@@ -1,0 +1,67 @@
+- hosts: stapp01
+  gather_facts: false
+  become: true
+
+  vars:
+    file: /opt/itadmin/blog.txt
+    permissions: r
+    etype: group
+
+
+  tasks:
+    - name: Create empty file
+      file:
+        dest: "{{ file }}"
+        state: touch
+#        owner: "{{ ansible_user }}"
+#        group: "{{ ansible_user }}"
+    - ansible.posix.acl:
+        path: "{{ file }}"
+        etype: "{{ etype }}"
+        permissions: "{{ permissions }}"
+        entity: "{{ ansible_user }}"
+        state: present
+
+- hosts: stapp02
+  gather_facts: false
+  become: true
+
+  vars:
+    file: /opt/itadmin/story.txt
+    permissions: rw
+    etype: user
+
+  tasks:
+    - file:
+        dest: "{{ file }}"
+        state: touch
+#        owner: "{{ ansible_user }}"
+#        group: "{{ ansible_user }}"
+    - ansible.posix.acl:
+        path: "{{ file }}"
+        etype: "{{ etype }}"
+        permissions: "{{ permissions }}"
+        entity: "{{ ansible_user }}"
+        state: present
+
+- hosts: stapp03
+  gather_facts: false
+  become: true
+
+  vars:
+    file: /opt/itadmin/media.txt
+    permissions: rw
+    etype: group
+
+  tasks:
+    - file:
+        dest: "{{ file }}"
+        state: touch
+#        owner: "{{ ansible_user }}"
+#        group: "{{ ansible_user }}"
+    - ansible.posix.acl:
+        path: "{{ file }}"
+        etype: "{{ etype }}"
+        permissions: "{{ permissions }}"
+        entity: "{{ ansible_user }}"
+        state: present

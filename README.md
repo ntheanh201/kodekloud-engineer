@@ -192,6 +192,7 @@
 ### Level 3
 
 - [Creating Soft Links Using Ansible](/curriculum/ansible/level-3/create-soft-links-using-ansible)
+- [Managing ACLs Using Ansible](/curriculum/ansible/level-3/create-soft-links-using-ansible)
 
 ## Docker
 

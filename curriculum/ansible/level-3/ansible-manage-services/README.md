@@ -16,7 +16,7 @@ c. The inventory /home/thor/ansible/inventory is already there on jump host.
 d. Make sure user thor should be able to run the playbook on jump host.
 
 Note: Validation will try to run playbook using command ansible-playbook -i inventory playbook.yml so please make sure
-playbook works this way, without passing any extra arguments.~~~~
+playbook works this way, without passing any extra arguments.
 
 ### Solution
 

@@ -194,6 +194,8 @@
 - [Creating Soft Links Using Ansible](/curriculum/ansible/level-3/create-soft-links-using-ansible)
 - [Managing ACLs Using Ansible](/curriculum/ansible/level-3/create-soft-links-using-ansible)
 - [Ansible Manage Services](/curriculum/ansible/level-3/ansible-manage-services)
+- [Ansible Lineinfile Module](/curriculum/ansible/level-3/ansible-lineinfile-module)
+- [Ansible Replace Module](/curriculum/ansible/level-3/ansible-replace-module)
 
 ## Docker
 

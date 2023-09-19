@@ -1,0 +1,28 @@
+- hosts: stapp01, stapp02, stapp03
+  gather_facts: false
+  become: true
+
+  vars:
+    package: httpd
+    index_file: /var/www/html/index.html
+
+  tasks:
+    - package:
+        name: "{{ package }}"
+        state: present
+    - service:
+        name: "{{ package }}"
+        state: started
+        enabled: true
+    - copy:
+        dest: "{{ index_file }}"
+        content: |
+          This is a Nautilus sample file, created using Ansible!
+        mode: 0744
+    - lineinfile:
+        path: "{{ index_file }}"
+        insertbefore: BOF
+        group: apache
+        owner: apache
+        state: present
+        line: "Welcome to xFusionCorp Industries!"

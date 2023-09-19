@@ -1,0 +1,16 @@
+- hosts: stapp01, stapp02, stapp03
+  gather_facts: false
+  become: true
+
+  vars:
+    package: httpd
+
+
+  tasks:
+    - package:
+        name: "{{ package }}"
+        state: present
+    - service:
+        name: "{{ package }}"
+        state: started
+        enabled: true

@@ -225,6 +225,10 @@
 - [Save, Load and Transfer Docker Image](/curriculum/docker/level-3/save-load-transfer-docker-image)
 - [Write a Docker Compose File](/curriculum/docker/level-3/write-a-docker-compose-file)
 
+### Level 4
+
+- [Resolve Dockerfile Issues](/curriculum/docker/level-4/resolve-dockerfile-issues)
+
 ## Git
 
 - See: [Git](/curriculum/git)

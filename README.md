@@ -228,6 +228,7 @@
 ### Level 4
 
 - [Resolve Dockerfile Issues](/curriculum/docker/level-4/resolve-dockerfile-issues)
+- [Resolve Docker Compose Issues](/curriculum/docker/level-4/resolve-docker-compose-issues)
 
 ## Git
 

@@ -53,8 +53,6 @@ Hi folks 👋
 - Install Ansible: `./install_ansible.sh`
 - Solve Linux tasks by running Ansible playbook
 
-# Ansible
-
 ## Test environment
 
 `ansible-playbook -i test-environments curriculum/<module_name>/<task>/<level>/solution.yaml`

@@ -1,13 +1,12 @@
 # KodeKloud Engineer
 
-- Jumphost: `CentOS 8`
+Hi folks 👋
 
-    - user: `thor`
-    - password: `mjolnir123`
+- This repository is my journey at KodeKloud Engineer, my solutions will be updated here.
+- I also updated the way to solve Linux problems, instead of doing some boring Linux commands, my solution will solve it
+  by leveraging Ansible
 
-- Nautilus App Servers: `CentOS 7`
-
-# Common Linux commands
+# SSH commands
 
 | Service Name             | Command                     |
 |--------------------------|-----------------------------|
@@ -39,10 +38,20 @@
 
 # Getting Started
 
+## Jump server information
+
+- Jumphost: `CentOS 8`
+    - user: `thor`
+    - password: `mjolnir123`
+
+- Nautilus App Servers: `CentOS 7`
+
+## How to solve Linux problems
+
 - Clone the repository: `git clone https://github.com/ntheanh201/kodekloud-engineer.git`
 - Go to folder: `cd kodekloud-engineer`
 - Install Ansible: `./install_ansible.sh`
-- Solve task by running Ansible playbook
+- Solve Linux tasks by running Ansible playbook
 
 # Ansible
 
@@ -56,7 +65,7 @@
 
 # Curriculum
 
-## Linux
+## Linux (automated with Ansible)
 
 - See: [Linux](/curriculum/linux)
 

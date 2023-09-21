@@ -12,4 +12,6 @@ user can run docker commands without sudo.
 
 ```shell
 sudo chmod 666 /var/run/docker.sock
+sudo su
+su kareem
 ```

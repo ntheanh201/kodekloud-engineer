@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    container_name: php_host
+    image: php:apache-bullseye
+    ports:
+      - "3002:80"
+    volumes:
+      - /var/www/html:/var/www/html
+  db:
+    image: mariadb
+    container_name: mysql_host
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=database_host
+      - MARIADB_ROOT_PASSWORD=p4$$W0rD

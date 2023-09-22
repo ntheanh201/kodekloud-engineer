@@ -236,6 +236,7 @@ Hi folks 👋
 
 - [Resolve Dockerfile Issues](/curriculum/docker/level-4/resolve-dockerfile-issues)
 - [Resolve Docker Compose Issues](/curriculum/docker/level-4/resolve-docker-compose-issues)
+- [Deploy an App on Docker Containers](/curriculum/docker/level-4/deploy-an-app-on-docker-containers)
 
 ## Git
 

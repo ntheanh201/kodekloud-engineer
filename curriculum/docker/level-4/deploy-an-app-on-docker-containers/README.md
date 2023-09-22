@@ -46,7 +46,11 @@ deployed again using your compose file.
 ### Solution
 
 ```shell
-cd /opt/dba
-vim docker-compose.yml
+cd /opt/devops
+vi docker-compose.yml
+
+docker-compose up -d
+
+curl localhost:3002
 ```
 

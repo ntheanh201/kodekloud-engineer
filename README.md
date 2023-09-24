@@ -6,6 +6,12 @@ Hi folks 👋
 - I also updated the way to solve Linux problems, instead of doing some boring Linux commands, my solution will solve it
   by leveraging Ansible
 
+## Ranking
+
+- Update 24/09/2023: Promoted to **Senior DevOps Engineer**
+
+![Senior DevOps Engineer](assets/senior.png)
+
 # SSH commands
 
 | Service Name             | Command                     |

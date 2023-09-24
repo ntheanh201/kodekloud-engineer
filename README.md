@@ -285,6 +285,9 @@ Hi folks 👋
 ### Level 1
 
 - [Jenkins Installation](/curriculum/jenkins/level-1/jenkins-installation)
+- [Jenkins Plugins](/curriculum/jenkins/level-1/jenkins-plugins)
+- [Jenkins Create Users](/curriculum/jenkins/level-1/jenkins-create-users)
+- [Jenkins Folders](/curriculum/jenkins/level-1/jenkins-folders)
 - [Jenkins Install Packages](/curriculum/jenkins/level-1/jenkins-install-packages)
 
 ### Level 2

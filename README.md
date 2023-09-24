@@ -268,6 +268,10 @@ Hi folks 👋
 - [Git Clean](/curriculum/git/level-3/git-clean)
 - [Git Stash](/curriculum/git/level-3/git-stash)
 
+### Level 4
+
+- [Git Rebase](/curriculum/git/level-4/git-rebase)
+
 ## Jenkins
 
 - See: [Jenkins](/curriculum/jenkins)

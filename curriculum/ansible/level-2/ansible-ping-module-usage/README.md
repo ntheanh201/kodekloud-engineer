@@ -20,5 +20,6 @@ from jump host to App Server 1, make sure ping works.
 ```shell
 ssh-keygen
 sshpass -p Ir0nM@n ssh-copy-id -i "/home/thor/.ssh/id_rsa.pub" tony@stapp01 -f -o StrictHostKeyChecking=no
-ansible -m ping -i inventory stapp01
 ```
+- Update inventory (add ssh_user): See [Inventory](./inventory)
+- Check: `ansible -m ping -i inventory stapp01`

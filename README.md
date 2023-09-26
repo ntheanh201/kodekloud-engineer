@@ -277,6 +277,7 @@ Hi folks 👋
 ### Level 4
 
 - [Git Rebase](/curriculum/git/level-4/git-rebase)
+- [Manage Git Repositories](/curriculum/git/level-4/manage-git-repositories)
 
 ## Jenkins
 

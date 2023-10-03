@@ -210,6 +210,10 @@ Hi folks 👋
 - [Ansible Lineinfile Module](/curriculum/ansible/level-3/ansible-lineinfile-module)
 - [Ansible Replace Module](/curriculum/ansible/level-3/ansible-replace-module)
 
+### Level 4
+
+- [Ansible Facts Gathering](/curriculum/ansible/level-4/ansible-facts-gathering)
+
 ## Docker
 
 - See: [Docker](/curriculum/docker)

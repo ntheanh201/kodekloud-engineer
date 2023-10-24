@@ -213,6 +213,7 @@ Hi folks 👋
 ### Level 4
 
 - [Ansible Facts Gathering](/curriculum/ansible/level-4/ansible-facts-gathering)
+- [Ansible Create Users and Groups](/curriculum/ansible/level-4/ansible-create-users-and-groups)
 
 ## Docker
 

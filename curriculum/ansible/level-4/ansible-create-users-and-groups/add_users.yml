@@ -1,0 +1,45 @@
+- hosts: stapp02
+  gather_facts: true
+  become: true
+  vars_files:
+    - ~/playbooks/passwords.yml
+  vars:
+    users_data_file: ~/playbooks/data/users.yml
+
+  tasks:
+    - name: Create developers and admins groups
+      group:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - developers
+        - admins
+    - name: Read users from YAML file
+      include_vars:
+        file: "{{ users_data_file }}"
+        name: users
+    - name: Create admin users and assign to group admins
+      user:
+        name: "{{ item }}"
+        state: present
+        group: admins
+        # home: "/home/{{ item }}"
+        password: "{{ admin_password | password_hash('sha512') }}"
+      loop: "{{ users.admins }}"
+      when: users.admins is defined
+    - name: Create developer users and assign to group developers
+      user:
+        name: "{{ item }}"
+        state: present
+        group: developers
+        home: /var/www
+        password: "{{ developer_password | password_hash('sha512') }}"
+      loop: "{{ users.developers }}"
+      when: users.developers is defined
+    - name: Add users to the 'wheel' group
+      user:
+        name: "{{ item }}"
+        groups: wheel
+        append: true
+      loop: "{{ users.admins }}"
+      when: users.admins is defined

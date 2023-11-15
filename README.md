@@ -15,7 +15,7 @@ Hi folks 👋
 # SSH commands
 
 | Service Name             | Command                     |
-|--------------------------|-----------------------------|
+| ------------------------ | --------------------------- |
 | Nautilus App 1           | `ssh tony@172.16.238.10`    |
 | Nautilus App 2           | `ssh steve@172.16.238.11`   |
 | Nautilus App 3           | `ssh banner@172.16.238.12`  |
@@ -31,7 +31,7 @@ Hi folks 👋
 `sudo yum install sshpass -y`
 
 | Server Name | Purpose                  | Command                                                                     |
-|-------------|--------------------------|-----------------------------------------------------------------------------|
+| ----------- | ------------------------ | --------------------------------------------------------------------------- |
 | stapp01     | Nautilus App 1           | `sshpass -p Ir0nM@n ssh -o StrictHostKeyChecking=no tony@172.16.238.10`     |
 | stapp02     | Nautilus App 2           | `sshpass -p Am3ric@ ssh -o StrictHostKeyChecking=no steve@172.16.238.11`    |
 | stapp03     | Nautilus App 3           | `sshpass -p BigGr33n ssh -o StrictHostKeyChecking=no banner@172.16.238.12`  |
@@ -214,6 +214,7 @@ Hi folks 👋
 
 - [Ansible Facts Gathering](/curriculum/ansible/level-4/ansible-facts-gathering)
 - [Ansible Create Users and Groups](/curriculum/ansible/level-4/ansible-create-users-and-groups)
+- [Managing Jinja2 Templates Using Ansible](/curriculum/ansible/level-4/managing-jinja2-templates-using-ansible)
 
 ## Docker
 

@@ -1,0 +1,28 @@
+---
+# tasks file for role/test
+
+- file:
+    path: /var/www
+    state: directory
+  
+- file:
+    path: /var/www/html
+    state: directory
+
+- name: jinja2
+  template:
+    src: templates/index.html.j2
+    dest: /var/www/html/index.html
+    mode: '0644'
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: install the latest version of HTTPD
+  yum:
+    name: httpd
+    state: latest
+
+- name: Start service httpd
+  service:
+    name: httpd
+    state: started

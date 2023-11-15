@@ -14,4 +14,6 @@ Note: The kubectl on jump_host has been configured to work with the kubernetes c
 
 ### Solution
 
+- Get yaml version of deployment: `kubectl get deploy python-deployment-nautilus -o yaml`
+
 - See: [Solution](./solution.yaml)

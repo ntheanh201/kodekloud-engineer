@@ -1,0 +1,25 @@
+- hosts: stapp01, stapp02, stapp03
+  gather_facts: true
+  become: true
+
+  vars:
+    facts_file: /root/facts.txt
+    package: httpd
+    dest: /var/www/html
+
+  tasks:
+    - blockinfile:
+        path: "{{ facts_file }}"
+        create: true
+        block: |
+          Ansible managed node architecture is {{ ansible_architecture }}
+    - package:
+        name: httpd
+        state: present
+    - copy:
+        src: "{{ facts_file }}"
+        dest: "{{ dest }}/index.html"
+        remote_src: true
+    - service:
+        name: "{{ package }}"
+        state: started

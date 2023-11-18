@@ -1,0 +1,33 @@
+- hosts: stapp01,stapp02,stapp03
+  gather_facts: false
+  become: true
+
+  vars:
+    dir: /usr/src/security
+    dest_dir: /opt/security
+
+  tasks:
+    - name: Copy blog.txt to App Server 1
+      copy:
+        src: "{{ dir }}/blog.txt"
+        dest: "{{ dest_dir }}/blog.txt"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: 0744
+      when: "'stapp01' in inventory_hostname"
+    - name: Copy story.txt to App Server 2
+      copy:
+        src: "{{ dir }}/story.txt"
+        dest: "{{ dest_dir }}/story.txt"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: 0744
+      when: "'stapp02' in inventory_hostname"
+    - name: Copy media.txt to App Server 3
+      copy:
+        src: "{{ dir }}/media.txt"
+        dest: "{{ dest_dir }}/media.txt"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: 0744
+      when: "'stapp03' in inventory_hostname"

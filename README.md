@@ -215,6 +215,7 @@ Hi folks 👋
 - [Ansible Facts Gathering](/curriculum/ansible/level-4/ansible-facts-gathering)
 - [Ansible Create Users and Groups](/curriculum/ansible/level-4/ansible-create-users-and-groups)
 - [Managing Jinja2 Templates Using Ansible](/curriculum/ansible/level-4/managing-jinja2-templates-using-ansible)
+- [Ansible Setup Httpd and PHP](/curriculum/ansible/level-4/ansible-setup-httpd-and-php)
 
 ## Docker
 

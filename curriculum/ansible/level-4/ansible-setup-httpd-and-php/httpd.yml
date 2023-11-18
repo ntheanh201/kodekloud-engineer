@@ -1,0 +1,37 @@
+- hosts: stapp03
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Install httpd
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - httpd
+        - php
+    - name: Ensure /var/www/html/myroot directory exists
+      file:
+        path: /var/www/html/myroot
+        state: directory
+        mode: 0755
+      become: yes
+    - name: Update Apache configuration
+      lineinfile:
+        path: /etc/httpd/conf/httpd.conf
+        regexp: '^DocumentRoot'
+        line: 'DocumentRoot "/var/www/html/myroot"'
+    - name: Copy phpinfo.php.j2 template to Apache document root
+      template:
+        src: ~/playbooks/templates/phpinfo.php.j2
+        dest: /var/www/html/myroot/phpinfo.php
+        owner: apache
+        group: apache
+        mode: 0644
+      become: yes
+    - name: Start and enable http service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    

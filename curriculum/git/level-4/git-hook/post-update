@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get the current branch
+current_branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3)
+
+# Check if the current branch is master
+if [ "$current_branch" == "master" ]; then
+  # Get the current date in the format YYYY-MM-DD
+  current_date=$(date +'%Y-%m-%d')
+
+  # Define the tag name
+  tag_name="release-$current_date"
+
+  # Create the tag
+  git tag $tag_name
+
+  # Push the tag to the remote repository
+  git push origin $tag_name
+fi

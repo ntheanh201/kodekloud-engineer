@@ -287,6 +287,8 @@ Hi folks 👋
 - [Git Rebase](/curriculum/git/level-4/git-rebase)
 - [Manage Git Repositories](/curriculum/git/level-4/manage-git-repositories)
 - [Resolve Git Merge Conflicts](/curriculum/git/level-4/resolve-git-merge-conflicts)
+- [Git Hook](/curriculum/git/level-4/git-hook)
+- [Git Setup from Scratch](/curriculum/git/level-4/git-setup-from-scratch)
 
 ## Jenkins
 

@@ -21,7 +21,7 @@ git log
 
 git reset --hard ec06ba1869a8ffbd1dcc8910e7ca2fa10009503b
 
-git push origin master
+git push origin --force
 ```
 
 ![Git log](img.png)

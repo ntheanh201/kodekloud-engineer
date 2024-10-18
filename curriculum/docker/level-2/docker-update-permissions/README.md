@@ -9,9 +9,7 @@ User kareem is not able to run docker commands on App Server 3 in Stratos DC, ma
 user can run docker commands without sudo.
 
 ### Solution
-
+Add the user to the ```docker``` group
 ```shell
-sudo chmod 666 /var/run/docker.sock
-sudo su
-su kareem
+sudo usermod -aG docker kareem
 ```
